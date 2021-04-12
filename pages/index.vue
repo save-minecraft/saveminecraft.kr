@@ -2,11 +2,19 @@
 <template>
   <div class="flex flex-col w-full h-screen">
     <div class="p-4 text-center align-middle m-auto">
-      <h1 class="text-4xl font-black mb-2">Manage your Minecraft servers like pro.</h1>
-      <p class="text-xl mb-7">mcsv.kr platform. For Sysadmins, Just like you.</p>
+      <h1 class="text-4xl font-black mb-2">
+        Manage your Minecraft servers like pro.
+      </h1>
+      <p class="text-xl mb-7">
+        mcsv.kr platform. For Sysadmins, Just like you.
+      </p>
 
-      <p class="mb-4">Coming soon...</p>
-      <p class="text-sm">Proudly presented by <a class="text-blue-700" href="https://stella-it.com">Stella IT Inc.</a></p>
+      <p class="mb-4">
+        Coming soon...
+      </p>
+      <p class="text-sm">
+        Proudly presented by <a class="text-blue-700" href="https://stella-it.com">Stella IT Inc.</a>
+      </p>
     </div>
   </div>
 </template>

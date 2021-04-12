@@ -3,7 +3,7 @@ export default {
   tailwindcss: {
     jit: true
   },
-  
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'mcsv.kr',
@@ -50,5 +50,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+  target: 'static'
 }
