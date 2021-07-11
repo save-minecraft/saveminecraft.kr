@@ -6,6 +6,8 @@
           p.text-2xl.neodgm saveminecraft.kr
         ul.flex.justify-end.gap-4
           li
+            nuxt-link(to="/exhibition") 전시회
+          li
             a(href="https://cafe.naver.com/minecraftgame/1817994") 성명문
 
     nuxt
@@ -118,6 +120,9 @@ html {
   }
   .bg-gray-200 {
     @apply bg-gray-800;
+  }
+  .bg-yellow-100 {
+    background-color: rgb(20, 20, 0);
   }
 }
 

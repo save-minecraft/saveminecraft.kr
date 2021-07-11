@@ -1,16 +1,28 @@
 
 <template lang="pug">
   div
-    .drop-shadow.my-10.mx-2.p-4.text-center
-      p.inline-block.neodgm.creative-gradient
-        | let us be
-        | creative
+    div.bg-yellow-100
+      div.p-4.max-w-6xl.m-auto
+        .drop-shadow.my-10.mx-2.p-4.text-center
+          p.inline-block.neodgm.creative-gradient
+            | let us be
+            | creative
+        div.flex.justify-end.gap-4
+          div.inline-block.text-center
+            p.lv1.text-xl 셧다운제 폐지 청원
+            p.text-6xl.lv1 전시회
 
-    article.p-4.max-w-6xl.m-auto
-      //-
-        p.text-xl.text-center
-          | 셧다운제, 이제는 멈춰야 합니다.
-        .mt-6
+          div.inline-block.text-right
+            p.lv1.text-lg 2021.
+            p.lv1.text-2xl 07.16
+            p.lv1.text-2xl ~07.18
+
+        div.flex.justify-end.mt-4
+          nuxt-link.btn.bg-green-600.text-white(to="/exhibition" class="hover:bg-green-800")
+            | 자세히 알아보기
+            i.fas.fa-arrow-right.ml-2
+
+    article.p-4.max-w-6xl.m-auto.mt-4
 
       h2.lv1.text-2xl.mb-1
         | 어쩌다 마인크래프트는 성인 게임이 되었나요?
