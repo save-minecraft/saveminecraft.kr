@@ -79,6 +79,11 @@ export default Vue.extend({
           license: 'MIT License',
           url: 'https://github.com/sass/sass',
           icon: 'sass'
+        },
+        {
+          name: 'Fastify',
+          license: 'MIT License',
+          url: 'https://github.com/fastify/fastify'
         }
       ]
     }
