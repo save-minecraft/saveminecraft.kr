@@ -22,14 +22,25 @@
     .mt-4
     article.p-4.max-w-6xl.m-auto
       h2.lv1.text-2xl.mb-1 현재 진행중인 청원
-      p.mb-4 청원...
+      ul.grid.grid-cols-1.gap-4(class='md:grid-cols-2')
+        li(v-for='petition in petitions')
+          a.group.block.rounded-lg.p-4.border.border-gray-200.transition(:href='petition.url' class='hover:bg-green-500 hover:border-transparent hover:shadow-lg')
+            dl.items-center
+              .flex.justify-between.flex-col(class="lg:flex-row lg:items-center")
+                div
+                  p.leading-6.font-medium(class='group-hover:text-white')
+                    i.fas.fa-edit.mr-2
+                    | {{ petition.title }}
+                  p.text-sm.font-medium.text-gray-700(class='group-hover:text-green-200')
+                    | {{ petition.url.includes('president') ? "청와대 국민 청원" : "국회 국민 청원" }}
 
-    .bg-yellow-500.text-black.mt-4.mb-4
-      .p-6.max-w-6xl.m-auto
-        p.text-2xl.mb-2
-          i.fas.fa-exclamation-triangle.mr-2
-          | Test 12
-        p 이 것은 테스트 경고 입니다.
+    //-
+      .bg-yellow-500.text-black.mt-4.mb-4
+        .p-6.max-w-6xl.m-auto
+          p.text-2xl.mb-2
+            i.fas.fa-exclamation-triangle.mr-2
+            | Test 12
+          p 이 것은 테스트 경고 입니다.
 
     article.p-4.max-w-6xl.m-auto
       h2.lv1.text-2xl.mb-1 함께하고 있는 단체들
@@ -74,6 +85,16 @@ export default Vue.extend({
   layout: 'default',
   data () {
     return {
+      petitions: [
+        {
+          title: '셧다운제를 폐지하고, 마인크래프트 성인 게임화를 막아주세요.',
+          url: 'https://www1.president.go.kr/petitions/599533'
+        },
+        {
+          title: '셧다운제 폐지를 위한 청원',
+          url: 'https://petitions.assembly.go.kr/status/onGoing/C5578E6BB4646038E054A0369F40E84E'
+        }
+      ],
       sponsors: [
         {
           img: {
