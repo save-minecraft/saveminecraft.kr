@@ -16,7 +16,12 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'stylesheet', href: 'https://fontawesome.appie.dev/css/all.min.css' },
+      { rel: 'stylesheet', type: 'text/css', href: 'https://pretendard.appie.dev/web/static/pretendard.css' },
+      { rel: 'stylesheet', type: 'text/css', href: '/fonts/bundle.css' }
+    ],
+    script: [
+      { src: 'https://polyfill.appie.dev/polyfill.min.js' }
     ]
   },
 
