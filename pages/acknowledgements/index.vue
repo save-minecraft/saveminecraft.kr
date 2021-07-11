@@ -9,10 +9,17 @@
     article.p-4.max-w-6xl.m-auto
       h1.lv1.text-2xl.mb-2
         | 사용된 오픈소스 프로젝트
-      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet eleifend egestas. In dapibus metus nec enim semper, eget mollis lectus vulputate. Morbi ut pellentesque quam. Quisque laoreet vitae ex et pharetra. Fusce lobortis ligula ut imperdiet lacinia. Aliquam luctus ante velit, vel sollicitudin dui pellentesque non. Duis nec ex elementum, ultricies velit id, rhoncus orci. Fusce in arcu placerat, auctor ante eget, consequat nulla. Vivamus rhoncus id dolor vitae ullamcorper.
-      p Sed sagittis est sed mi tristique blandit. Suspendisse vitae hendrerit tellus. Praesent euismod diam eu vulputate pulvinar. Pellentesque suscipit luctus felis quis blandit. Nullam finibus imperdiet odio, rutrum laoreet ante tincidunt eget. Nunc euismod risus sit amet posuere maximus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi at rutrum lorem, fringilla imperdiet leo. Duis vestibulum augue neque, at consectetur lorem hendrerit ut. Cras quis tempus mi, in auctor est. Quisque diam ligula, fringilla et scelerisque et, vehicula ac ligula. Pellentesque vehicula id augue malesuada congue.
-      p Proin et orci dui. Nunc porttitor sodales sem. Curabitur viverra accumsan lacinia. Proin accumsan felis vel hendrerit suscipit. Curabitur interdum vulputate nulla id auctor. Aenean scelerisque risus volutpat, egestas turpis eu, semper sem. Aliquam in augue est. Morbi tincidunt lacus metus, vel commodo quam aliquam sed. Nullam rhoncus efficitur iaculis.
-
+      ul.grid.grid-cols-1.gap-4(class='md:grid-cols-2 lg:grid-cols-3')
+        li(v-for='project in projects')
+          a.group.block.rounded-lg.p-4.border.border-gray-200.transition(:href='project.url' class='hover:bg-green-500 hover:border-transparent hover:shadow-lg')
+            dl.items-center
+              .flex.justify-between.flex-col(class="lg:flex-row lg:items-center")
+                div
+                  p.leading-6.font-medium(class='group-hover:text-white')
+                    i.mr-2(:class='project.icon ? "fab fa-"+project.icon : "far fa-file-code"')
+                    | {{ project.name }}
+                  p.text-sm.font-medium.text-gray-700(class='group-hover:text-green-200')
+                    | {{ project.license }}
 
 </template>
 
@@ -20,7 +27,62 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  layout: 'default'
+  layout: 'default',
+  data () {
+    return {
+      projects: [
+        {
+          name: 'Vue.js',
+          license: 'MIT License',
+          url: 'https://github.com/vuejs/vue',
+          icon: 'vuejs'
+        },
+        {
+          name: 'nuxt.js',
+          license: 'MIT License',
+          url: 'https://github.com/nuxt/nuxt.js'
+        },
+        {
+          name: 'TypeScript',
+          license: 'MIT License',
+          url: 'https://github.com/microsoft/TypeScript'
+        },
+        {
+          name: 'Node.js',
+          license: 'Node.js License',
+          url: 'https://github.com/nodejs/node',
+          icon: 'node-js'
+        },
+        {
+          name: 'ESLint',
+          license: 'MIT License',
+          url: 'https://github.com/eslint/eslint',
+          icon: 'js'
+        },
+        {
+          name: 'TailwindCSS',
+          license: 'MIT License',
+          url: 'https://github.com/tailwindlabs/tailwindcss'
+        },
+        {
+          name: 'PostCSS',
+          license: 'MIT License',
+          url: 'https://github.com/postcss/postcss'
+        },
+        {
+          name: 'PUG',
+          license: 'MIT License',
+          url: 'https://github.com/pugjs/pug'
+        },
+        {
+          name: 'Sass',
+          license: 'MIT License',
+          url: 'https://github.com/sass/sass',
+          icon: 'sass'
+        }
+      ]
+    }
+  }
 })
 </script>
 
