@@ -123,6 +123,11 @@ export default Vue.extend({
           url: 'https://cafe.naver.com/goldbigdragon'
         },
         {
+          name: '한국 마인크래프트 포럼',
+          description: '---',
+          url: 'https://www.koreaminecraft.net/'
+        },
+        {
           name: '마인크래프트 BE 모두의 커뮤니티',
           description: '---'
         },
