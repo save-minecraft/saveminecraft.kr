@@ -124,6 +124,9 @@ export default Vue.extend({
           url: 'https://cafe.naver.com/minecraftgame'
         },
         {
+          img: {
+            light: '/assets/sponsors/goldbigdragon/logo.svg'
+          },
           name: '김태룡 카페',
           description: '한국의 대표적인 대규모 프로그래밍 커뮤니티로, 첫 성명문을 발표한 한국 마인크래프트 단체 9곳 중 하나입니다.',
           url: 'https://cafe.naver.com/goldbigdragon'

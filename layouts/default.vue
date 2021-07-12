@@ -10,6 +10,14 @@
           li
             nuxt-link(to="/press") 보도 자료
 
+    .bg-yellow-500.text-black.mt-4.mb-4(v-if="isIE")
+      .p-6.max-w-6xl.m-auto.text-center
+        p.text-2xl.mb-2
+          i.fas.fa-exclamation-triangle.mr-2
+          span.font-bold 잠시만요!
+        p 이 브라우저에서는 saveminecraft.kr 의 일부 기능이 정상적으로 동작하지 않을 수 있습니다.
+        p 다른 브라우저를 이용해서 접속해 주세요.
+
     nuxt
 
     footer.p-4.max-w-6xl.m-auto.mt-6
@@ -23,6 +31,19 @@
 </template>
 
 <script>
+import Vue from 'vue'
+
+export default Vue.extend({
+  data () {
+    return {
+      isIE: true
+    }
+  },
+  mounted () {
+    this.isIE = navigator.userAgent.includes('Trident')
+  }
+})
+
 if (process.client) {
   (function () {
     // eslint-disable-next-line no-var
