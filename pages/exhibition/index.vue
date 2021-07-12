@@ -10,9 +10,9 @@
             p.text-6xl.lv1 전시회
 
           div.inline-block.text-right
-            p.lv1.text-lg 2021.
-            p.lv1.text-2xl 07.16
-            p.lv1.text-2xl ~07.18
+            p.lv1.text-lg.no-kerning 2021.
+            p.lv1.text-2xl.no-kerning 07.16
+            p.lv1.text-2xl.no-kerning ~07.18
     .mt-4
     div.p-4.max-w-6xl.m-auto
       h1.neodgm.text-3xl.text-center Under Construction
@@ -28,4 +28,7 @@ export default Vue.extend({
 </script>
 
 <style lang="postcss">
+  .no-kerning {
+    font-kerning: none;
+  }
 </style>
