@@ -43,7 +43,7 @@
                   | {{ petition.url.includes('president') ? "청와대 국민 청원" : "국회 국민 청원" }}
 
                 div.mt-4(class='group-hover:text-green-200' v-if="petition.signed")
-                  div.inline-block(class='group-hover:text-green-100') 
+                  div.inline-block(class='group-hover:text-green-100')
                     span.text-xl {{ comma(petition.signed.current) }}
                     | &nbsp;
                     span ({{ (petition.signed.current * 100 / petition.signed.goal).toFixed(1) }}%)
@@ -51,7 +51,10 @@
                     .inline-block.ml-1 /
                     .inline-block.ml-1 {{ comma(petition.signed.goal) }}
 
-                  p.text-sm.mt-2
+                  div.mt-1.h-auto
+                    progress.bg-grey-200.h-1.m-0(style="width: 100%;" max="100" :value="(petition.signed.current * 100 / petition.signed.goal)")
+
+                  p.text-sm.mt-1
                     span.font-semibold 마지막 업데이트:
                     |
                     | {{ $dayjs(petition.lastUpdate).fromNow() }}
@@ -232,4 +235,34 @@ export default Vue.extend({
   .container {
     @apply min-h-screen flex justify-center items-center text-center mx-auto;
   }
+  progress {
+    appearance: none;
+    -webkit-appearance: none;
+    @apply bg-gray-300;
+  }
+  progress[value]::-webkit-progress-bar {
+    @apply bg-gray-300;
+  }
+  progress[value]::-webkit-progress-value {
+    @apply bg-gray-700;
+  }
+  progress[value]::-moz-progress-bar {
+    @apply bg-gray-700;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    progress {
+      @apply bg-gray-700;
+    }
+    progress[value]::-webkit-progress-bar {
+      @apply bg-gray-700;
+    }
+    progress[value]::-webkit-progress-value {
+      @apply bg-gray-300;
+    }
+    progress[value]::-moz-progress-bar {
+      @apply bg-gray-300;
+    }
+  }
+
 </style>
