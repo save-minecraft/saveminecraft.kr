@@ -158,17 +158,22 @@ export default Vue.extend({
           description: '---'
         },
         {
-          name: '마인이메이터 유저 센터',
-          description: '---'
+          name: '마인이메이터 유저 센터 (마유센)',
+          description: '마인크래프트에 기반한 애니메이션 제작 프로그램인 마인이메이터를 활용해 애니메이션, 만화, 캐릭터 등을 제작하는 창작 커뮤니티입니다.',
+          url: 'http://cafe.naver.com/minecenter1'
         },
         {
           name: '미씩몹 코리아',
           description: '마인크래프트에 롤플레잉적 요소를 가미하는 기술적인 부분에서의 커뮤니티로, 셧다운제 폐지 청원에 함께 하고 있습니다.',
-          url: 'https://discord.gg/Ffq2ewUhQT'
+          url: 'https://discord.gg/Ffq2ewUhQT',
+          img: {
+            light: '/assets/sponsors/mythicmobs-korea/light.svg',
+            dark: '/assets/sponsors/mythicmobs-korea/dark.svg'
+          }
         },
         {
           name: "Builder's Factory",
-          description: '---'
+          description: '한국과 해외를 이어주는 대표적인 디자인 커뮤니티이며, 셧다운제 관련 정보와 이슈를 해외에 조달하고 온라인 집회를 주도하고 있습니다.',
         },
         {
           name: 'GBF Studio',
