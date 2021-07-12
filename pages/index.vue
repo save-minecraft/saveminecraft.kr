@@ -59,11 +59,11 @@
       p.mb-2 마인크래프트의 미래를 위해 함께 힘을 합쳐주고 있는 단체들입니다.
       ul.grid.grid-cols-1.gap-4(class='sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4')
         li(v-for='sponsor in sponsors')
-          .group.cursor-pointer.block.rounded-lg.p-4.transition(@click='showSponsor(sponsor)' class="hover:scale-110")
+          .group.cursor-pointer.block.rounded-lg.p-4.transition(@click='showSponsor(sponsor)' class="hover:scale-110 hover:bg-gray-200")
             dl.items-center.align-middle
-              template(v-if='sponsor.img && sponsor.img.light && sponsor.img.dark')
+              template(v-if='sponsor.img && sponsor.img.light')
                 picture.h-10
-                  source(:srcset='sponsor.img.dark' media='(prefers-color-scheme: dark)')
+                  source(:srcset='sponsor.img.dark' media='(prefers-color-scheme: dark)' v-if='sponsor.img.dark')
                   img.h-10.m-auto(:src='sponsor.img.light')
               template(v-else)
                 p.text-xl.lv1.text-center {{ sponsor.name }}
@@ -123,6 +123,9 @@ export default Vue.extend({
           url: 'https://cafe.naver.com/goldbigdragon'
         },
         {
+          img: {
+            light: '/assets/sponsors/korea-minecraft-forum/logo.svg'
+          },
           name: '한국 마인크래프트 포럼',
           description: '한국의 대표적인 대규모 마인크래프트 커뮤니티로, 셧다운제 폐지 청원 전시회 프로젝트에 참여하고 있습니다.',
           url: 'https://www.koreaminecraft.net/'
@@ -198,14 +201,28 @@ export default Vue.extend({
   .creative-gradient {
     font-size: 5em;
 
+    /**
+     * Improvision of linear-gradient can not be animated.
+     *
+     * creating rainbow linear-gradient with double the size,
+     * and move the background position around
+     */
     background-image: var(--looping-rainbow);
     background-size: 200%;
     background-position: 0;
 
     animation: creative-gradient-move-right 5s ease-in-out infinite;
 
+    /**
+     * TODO: Requires IE Fallback.
+     * Even in 2021,
+     * we need to support IE because it is SOUTH KOREA.
+     *
+     * (Add :facepalm: here)
+     */
     background-clip: text;
     -webkit-background-clip: text;
+
     color: transparent;
   }
   @media (max-width: 700px) {

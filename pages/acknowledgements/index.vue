@@ -99,11 +99,6 @@ export default Vue.extend({
           name: 'Pretendard',
           license: 'SIL Open Font License',
           url: 'https://github.com/orioncactus/pretendard'
-        },
-        {
-          name: 'Font Awesome',
-          license: 'Font Awesome Free License',
-          url: 'https://github.com/FortAwesome/Font-Awesome'
         }
       ]
     }

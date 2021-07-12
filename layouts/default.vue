@@ -121,6 +121,9 @@ html {
   .bg-gray-200 {
     @apply bg-gray-800;
   }
+  .hover\:bg-gray-200 {
+    @apply hover:bg-gray-800;
+  }
   .bg-yellow-100 {
     background-color: rgb(20, 20, 0);
   }
