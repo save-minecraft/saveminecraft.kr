@@ -35,17 +35,16 @@
         li(v-for='petition in petitions')
           a.group.block.rounded-lg.p-4.bg-gray-200.transition(:href='petition.url' class='hover:bg-green-500 hover:border-transparent hover:shadow-lg')
             dl.items-center
-              .flex.justify-between.flex-col(class="lg:flex-row lg:items-center")
-                div
-                  p.leading-6.font-medium(class='group-hover:text-white')
-                    i.fas.fa-edit.mr-2
-                    | {{ petition.title }}
-                  p.text-sm.font-medium.text-gray-500(class='group-hover:text-green-200')
-                    | {{ petition.url.includes('president') ? "청와대 국민 청원" : "국회 국민 청원" }}
+              div
+                p.leading-6.font-medium(class='group-hover:text-white')
+                  i.fas.fa-edit.mr-2
+                  | {{ petition.title }}
+                p.text-sm.font-medium.text-gray-500(class='group-hover:text-green-200')
+                  | {{ petition.url.includes('president') ? "청와대 국민 청원" : "국회 국민 청원" }}
 
                 div.mt-4(class='group-hover:text-green-200' v-if="petition.signed")
                   div.text-xl.inline-block(class='group-hover:text-green-100') {{ comma(petition.signed.current) }}
-                  div.inline-block.text-gray-700(class='group-hover:text-green-200')
+                  div.inline-block.text-gray-500(class='group-hover:text-green-200')
                     .inline-block.ml-1 /
                     .inline-block.ml-1 {{ comma(petition.signed.goal) }}
 
