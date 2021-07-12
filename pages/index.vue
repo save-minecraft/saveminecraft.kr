@@ -207,6 +207,9 @@ export default Vue.extend({
       // umm?
       this.currentSponsor = sponsor
       this.openSponsorModal = true
+    },
+    comma (num: string) {
+      return `${num}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
     }
   }
 })
