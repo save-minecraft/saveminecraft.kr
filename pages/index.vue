@@ -113,7 +113,7 @@ export default Vue.extend({
             light: '/assets/sponsors/ourmc/ourmc_light.svg',
             dark: '/assets/sponsors/ourmc/ourmc_dark.svg'
           },
-          name: '우리 마인크래프트 공간',
+          name: '우리들의 마인크래프트 공간',
           description: '한국의 대표적인 대규모 마인크래프트 커뮤니티로, 첫 성명문을 발표한 한국 마인크래프트 단체 9곳 중 하나입니다.',
           url: 'https://cafe.naver.com/minecraftgame'
         },
