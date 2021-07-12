@@ -167,7 +167,11 @@ export default Vue.extend({
         },
         {
           name: "Pixel Creator's Place",
-          description: ''
+          description: '한국 마인크래프트 Pixel Art와 모델링 커뮤니티입니다. \n' +
+            '셧다운제 폐지를 통해 어린 마인크래프트 유저 분들이 모델링과 리소스에 대해 관심을 가져주셨으면 하는 바람에 첫 성명문에 참여하게 된 마인크래프트 단체 10곳 중 한 곳입니다.\n',
+          img: {
+            light: '/assets/sponsors/pixel-creators-place/light.svg'
+          }
         },
         {
           img: {
