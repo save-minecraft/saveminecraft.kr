@@ -114,17 +114,17 @@ export default Vue.extend({
             dark: '/assets/sponsors/ourmc/ourmc_dark.svg'
           },
           name: '우리 마인크래프트 공간',
-          description: '국내 대규모 마인크래프트 커뮤니티',
+          description: '한국의 대표적인 대규모 마인크래프트 커뮤니티로, 첫 성명문을 발표한 한국 마인크래프트 단체 9곳 중 하나입니다.',
           url: 'https://cafe.naver.com/minecraftgame'
         },
         {
           name: '김태룡 카페',
-          description: '---',
+          description: '한국의 대표적인 대규모 프로그래밍 커뮤니티로, 첫 성명문을 발표한 한국 마인크래프트 단체 9곳 중 하나입니다.',
           url: 'https://cafe.naver.com/goldbigdragon'
         },
         {
           name: '한국 마인크래프트 포럼',
-          description: '---',
+          description: '한국의 대표적인 대규모 마인크래프트 커뮤니티로, 셧다운제 폐지 청원 전시회 프로젝트에 참여하고 있습니다.',
           url: 'https://www.koreaminecraft.net/'
         },
         {
@@ -161,7 +161,7 @@ export default Vue.extend({
             dark: '/assets/sponsors/packet.stream/logo-white.svg'
           },
           name: 'Packetstream',
-          description: '당신이 어떠한 서버를 운영하던, 최고의 DDoS 방어 성능을 자랑합니다.',
+          description: '네트워크 가속 및 DDoS 보안 서비스를 제공하는 업체로, 이번 셧다운제 폐지 청원 전시회의 인프라를 담당합니다.',
           url: 'https://packet.stream'
         },
         {
@@ -170,7 +170,7 @@ export default Vue.extend({
             dark: '/assets/sponsors/stella-it/logo_dark.svg'
           },
           name: 'Stella IT',
-          description: '합리적인 가격에 고성능 인프라를 제공하는 Stella IT 입니다.',
+          description: 'VPS 및 DDoS 보안 서비스를 제공하는 업체로, 이번 셧다운제 폐지 청원 전시회의 소프트웨어 개발과 인프라 운용을 담당합니다.',
           url: 'https://stella-it.com'
         }
       ],
