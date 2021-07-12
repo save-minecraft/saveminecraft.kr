@@ -96,14 +96,14 @@ export default Vue.extend({
           url: 'http://levelup.nexon.com/font/index.aspx?page=1'
         },
         {
-          name: 'NEXON Lv.1 Gothic',
-          license: 'SIL Open Font License',
-          url: 'http://levelup.nexon.com/font/index.aspx?page=1'
-        },
-        {
           name: 'Pretendard',
           license: 'SIL Open Font License',
           url: 'https://github.com/orioncactus/pretendard'
+        },
+        {
+          name: 'Font Awesome',
+          license: 'Font Awesome Free License',
+          url: 'https://github.com/FortAwesome/Font-Awesome'
         }
       ]
     }
