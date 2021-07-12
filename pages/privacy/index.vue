@@ -58,7 +58,7 @@
             li 통계 분석 등의 목적을 위하여 구글 애널리틱스(GA․Google Analytics)에서 사용됩니다.
       p.mt-4.text-xl 제9조(개인정보 처리책임자)
       p 세이브 마인크래프트는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 처리책임자를 지정하고 있습니다.
-      ol.list-disc.list_inside.ml-4
+      ol.list-disc.list_inside.ml-8
         li 처리책임자 : 부본부장
         li 처리담당부서 : 세이브 마인크래프트 운영본부
         li 연락처 : support@ourmc.space
