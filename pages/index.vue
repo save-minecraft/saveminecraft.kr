@@ -10,9 +10,9 @@
             p.text-6xl.lv1 전시회
 
           div.inline-block.text-right
-            p.lv1.text-lg 2021.
-            p.lv1.text-2xl 07.16
-            p.lv1.text-2xl ~07.18
+            p.lv1.text-lg.no-kerning 2021.
+            p.lv1.text-2xl.no-kerning 07.16
+            p.lv1.text-2xl.no-kerning ~07.18
 
         div.flex.justify-end.mt-4
           nuxt-link.btn.bg-green-600.text-white(to="/exhibition" class="hover:bg-green-800")
@@ -263,6 +263,10 @@ export default Vue.extend({
     progress[value]::-moz-progress-bar {
       @apply bg-gray-300;
     }
+  }
+
+  .no-kerning {
+    font-kerning: none;
   }
 
 </style>
