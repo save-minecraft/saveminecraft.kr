@@ -84,6 +84,26 @@ export default Vue.extend({
           name: 'Fastify',
           license: 'MIT License',
           url: 'https://github.com/fastify/fastify'
+        },
+        {
+          name: 'Neo둥근모 Pro',
+          license: 'SIL Open Font License',
+          url: 'https://github.com/Dalgona/neodgm-pro'
+        },
+        {
+          name: 'NEXON Lv.1 Gothic',
+          license: 'SIL Open Font License',
+          url: 'http://levelup.nexon.com/font/index.aspx?page=1'
+        },
+        {
+          name: 'NEXON Lv.1 Gothic',
+          license: 'SIL Open Font License',
+          url: 'http://levelup.nexon.com/font/index.aspx?page=1'
+        },
+        {
+          name: 'Pretendard',
+          license: 'SIL Open Font License',
+          url: 'https://github.com/orioncactus/pretendard'
         }
       ]
     }
