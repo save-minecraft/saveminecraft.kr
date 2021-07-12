@@ -41,6 +41,11 @@ export default Vue.extend({
   },
   mounted () {
     this.isIE = navigator.userAgent.includes('Trident')
+  },
+  methods: {
+    comma (num) {
+      return `${num}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+    }
   }
 })
 

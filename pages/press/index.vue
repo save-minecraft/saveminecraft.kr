@@ -11,7 +11,7 @@
         | 최신 뉴스
       ul.grid.grid-cols-1.gap-4(class='lg:grid-cols-2')
         li(v-for='news in newses')
-          a.group.block.rounded-lg.p-4.border.border-gray-200.transition(:href='news.url' class='hover:bg-green-500 hover:border-transparent hover:shadow-lg')
+          a.group.block.rounded-lg.p-4.bg-gray-200.transition(:href='news.url' class='hover:bg-green-500 hover:border-transparent hover:shadow-lg')
             dl.items-center
               .flex.justify-between.flex-col(class="lg:flex-row lg:items-center")
                 div
