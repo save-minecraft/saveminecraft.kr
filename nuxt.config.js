@@ -27,7 +27,8 @@ export default {
       { rel: 'stylesheet', type: 'text/css', href: '/fonts/bundle.css' }
     ],
     script: [
-      { src: 'https://polyfill.appie.dev/polyfill.min.js' }
+      { src: 'https://polyfill.appie.dev/polyfill.min.js' },
+      { src: 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "def3fbe44e284888bcc054cdf4f44bdb"}' }
     ]
   },
 
