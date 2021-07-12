@@ -35,14 +35,25 @@
         li(v-for='petition in petitions')
           a.group.block.rounded-lg.p-4.border.border-gray-200.transition(:href='petition.url' class='hover:bg-green-500 hover:border-transparent hover:shadow-lg')
             dl.items-center
-              .flex.justify-between.flex-col(class="lg:flex-row lg:items-center")
-                div
-                  p.leading-6.font-medium(class='group-hover:text-white')
-                    i.fas.fa-edit.mr-2
-                    | {{ petition.title }}
-                  p.text-sm.font-medium.text-gray-700(class='group-hover:text-green-200')
-                    | {{ petition.url.includes('president') ? "청와대 국민 청원" : "국회 국민 청원" }}
+              div
+                p.leading-6.font-medium(class='group-hover:text-white')
+                  i.fas.fa-edit.mr-2
+                  | {{ petition.title }}
+                p.text-sm.font-medium.text-gray-700(class='group-hover:text-green-200')
+                  | {{ petition.url.includes('president') ? "청와대 국민 청원" : "국회 국민 청원" }}
 
+                div.mt-4(class='group-hover:text-green-200' v-if="petition.signed")
+                  div.text-xl.inline-block(class='group-hover:text-green-100') {{ petition.signed.current }}
+                  div.inline-block.text-gray-700(class='group-hover:text-green-200')
+                    .inline-block.ml-1 /
+                    .inline-block.ml-1 {{ petition.signed.goal }}
+
+                  p.mt-2
+                    span.font-semibold 마지막 업데이트:
+                    |
+                    | {{ $dayjs(petition.lastUpdate).fromNow() }}
+                div.mt-4(v-else)
+                  div 청원 정보를 가져오는 중...
     //-
       .bg-yellow-500.text-black.mt-4.mb-4
         .p-6.max-w-6xl.m-auto
@@ -187,8 +198,9 @@ export default Vue.extend({
       openSponsorModal: false
     }
   },
-  mounted () {
-
+  async mounted () {
+    const data = await this.$axios.get('/v1/petitions')
+    this.petitions = data.data
   },
   methods: {
     showSponsor (sponsor: SponsorInterface) {

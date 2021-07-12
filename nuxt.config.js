@@ -54,11 +54,27 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/dayjs'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: 'https://api.saveminecraft.kr'
+  },
+
+  // Optional
+  dayjs: {
+    locales: ['ko'],
+    defaultLocale: 'ko',
+    defaultTimeZone: 'Asia/Seoul',
+    plugins: [
+      'utc', // import 'dayjs/plugin/utc'
+      'timezone', // import 'dayjs/plugin/timezone'
+      'relativeTime', // import 'dayjs/plugin/relativeTime'
+      'advancedFormat' // import 'dayjs/plugin/advancedFormat'
+    ] // Your Day.js plugin
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
