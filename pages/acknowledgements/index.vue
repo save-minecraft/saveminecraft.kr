@@ -18,7 +18,7 @@
                   p.leading-6.font-medium(class='group-hover:text-white')
                     i.mr-2(:class='project.icon ? "fab fa-"+project.icon : "far fa-file-code"')
                     | {{ project.name }}
-                  p.text-sm.font-medium.text-gray-700(class='group-hover:text-green-200')
+                  p.text-sm.font-medium.text-gray-500(class='group-hover:text-green-200')
                     | {{ project.license }}
 
 </template>

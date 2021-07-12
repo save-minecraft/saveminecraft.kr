@@ -17,10 +17,10 @@
                 div
                   p.leading-6.font-medium(class='group-hover:text-white')
                     | {{ news.title }}
-                  p.text-sm.font-medium.text-gray-700(class='group-hover:text-green-200' v-if="news.publisher")
+                  p.text-sm.font-medium.text-gray-500(class='group-hover:text-green-200' v-if="news.publisher")
                     | {{ news.publisher }}
-                  p.text-sm.font-medium.text-gray-700(class='group-hover:text-green-200')
-                    | {{ news.releasedAt }}
+                  p.text-sm.font-medium.text-gray-500(class='group-hover:text-green-200')
+                    | {{ $dayjs(news.releasedAt).format('YYYY년 MM월 DD일') }}
 
 </template>
 
