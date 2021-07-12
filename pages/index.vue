@@ -74,11 +74,17 @@
       template(#body)
         p.text-sm {{ currentSponsor && currentSponsor.description ? currentSponsor.description : "" }}
 
-        div(v-if="currentSponsor && currentSponsor.url")
-          .mt-4
-          a.btn.bg-green-600.text-white.text-sm(:href='currentSponsor ? currentSponsor.url : "#"' class="hover:bg-green-800")
-            | 홈페이지 접속
-            i.fas.fa-arrow-right.ml-2
+      template(#footer)
+        .flex.justify-between
+          div
+            a.btn.bg-green-600.text-white.text-sm(v-if="currentSponsor && currentSponsor.url" :href='currentSponsor ? currentSponsor.url : "#"' class="hover:bg-green-800")
+              | 홈페이지 접속
+              i.fas.fa-arrow-right.ml-2
+
+          div
+            .btn.bg-red-700.text-white.text-sm.cursor-pointer(class="hover:bg-red-800" @click="openSponsorModal = false")
+              i.fas.fa-times.mr-2
+              | 닫기
 
 </template>
 

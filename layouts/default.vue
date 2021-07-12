@@ -4,11 +4,11 @@
       nav.flex.justify-between.items-center
         nuxt-link(to="/")
           p.text-2xl.neodgm saveminecraft.kr
-        ul.flex.justify-end.gap-4
+        ul.flex.justify-end.gap-6
           li
             nuxt-link(to="/exhibition") 전시회
           li
-            a(href="https://cafe.naver.com/minecraftgame/1817994") 성명문
+            nuxt-link(to="/press") 보도 자료
 
     nuxt
 
