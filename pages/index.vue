@@ -43,12 +43,15 @@
                   | {{ petition.url.includes('president') ? "청와대 국민 청원" : "국회 국민 청원" }}
 
                 div.mt-4(class='group-hover:text-green-200' v-if="petition.signed")
-                  div.text-xl.inline-block(class='group-hover:text-green-100') {{ comma(petition.signed.current) }}
+                  div.inline-block(class='group-hover:text-green-100') 
+                    span.text-xl {{ comma(petition.signed.current) }}
+                    | &nbsp;
+                    span ({{ (petition.signed.current * 100 / petition.signed.goal).toFixed(1) }}%)
                   div.inline-block.text-gray-500(class='group-hover:text-green-200')
                     .inline-block.ml-1 /
                     .inline-block.ml-1 {{ comma(petition.signed.goal) }}
 
-                  p.mt-2
+                  p.text-sm.mt-2
                     span.font-semibold 마지막 업데이트:
                     |
                     | {{ $dayjs(petition.lastUpdate).fromNow() }}
