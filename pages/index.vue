@@ -129,7 +129,7 @@ export default Vue.extend({
             dark: '/assets/sponsors/ourmc/ourmc_dark.svg'
           },
           name: '우리들의 마인크래프트 공간',
-          description: '한국의 대표적인 대규모 마인크래프트 커뮤니티로, 첫 성명문을 발표한 한국 마인크래프트 단체 9곳 중 하나입니다.',
+          description: '우리들의 마인크래프트 공간은 30만 회원이 가입한 국내 최대 마인크래프트 커뮤니티로, 현재 셧다운제 폐지 운동의 최전선에 서있습니다.',
           url: 'https://cafe.naver.com/minecraftgame'
         },
         {
@@ -137,7 +137,7 @@ export default Vue.extend({
             light: '/assets/sponsors/goldbigdragon/logo.svg'
           },
           name: '김태룡 카페',
-          description: '한국의 대표적인 대규모 프로그래밍 커뮤니티로, 첫 성명문을 발표한 한국 마인크래프트 단체 9곳 중 하나입니다.',
+          description: '---',
           url: 'https://cafe.naver.com/goldbigdragon'
         },
         {
@@ -170,11 +170,20 @@ export default Vue.extend({
         },
         {
           name: 'HK Dev',
-          description: '---'
+          description: '한국의 대표적인 마인크래프트 관련 디스코드 개발자 커뮤니티이고, 셧다운제 폐지를 위해 여러 커뮤니티와 협력하고 있습니다.',
+          img: {
+            light: '/assets/sponsors/hk-dev/light.svg',
+            dark: '/assets/sponsors/hk-dev/dark.svg'
+          },
+          url: ' https://discord.gg/hkdev'
         },
         {
           name: "Pixel Creator's Place",
-          description: '---'
+          description: '한국 마인크래프트 Pixel Art와 모델링 커뮤니티입니다. 셧다운제 폐지를 통해 어린 마인크래프트 유저 분들이 모델링과 리소스에 대해 관심을 가져주셨으면 하는 바람에 첫 성명문에 참여하게 된 마인크래프트 단체 10곳 중 한 곳입니다.',
+          img: {
+            light: '/assets/sponsors/pixel-creators-place/light.svg'
+          },
+          url: 'https://discord.gg/pQjME4Y'
         },
         {
           img: {
