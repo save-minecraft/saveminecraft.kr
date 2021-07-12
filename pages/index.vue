@@ -33,7 +33,7 @@
       h2.lv1.text-2xl.mb-1 현재 진행중인 청원
       ul.grid.grid-cols-1.gap-4(class='md:grid-cols-2')
         li(v-for='petition in petitions')
-          a.group.block.rounded-lg.p-4.border.border-gray-200.transition(:href='petition.url' class='hover:bg-green-500 hover:border-transparent hover:shadow-lg')
+          a.group.block.rounded-lg.p-4.bg-gray-200.transition(:href='petition.url' class='hover:bg-green-500 hover:border-transparent hover:shadow-lg')
             dl.items-center
               div
                 p.leading-6.font-medium(class='group-hover:text-white')
@@ -43,10 +43,10 @@
                   | {{ petition.url.includes('president') ? "청와대 국민 청원" : "국회 국민 청원" }}
 
                 div.mt-4(class='group-hover:text-green-200' v-if="petition.signed")
-                  div.text-xl.inline-block(class='group-hover:text-green-100') {{ petition.signed.current }}
+                  div.text-xl.inline-block(class='group-hover:text-green-100') {{ comma(petition.signed.current) }}
                   div.inline-block.text-gray-700(class='group-hover:text-green-200')
                     .inline-block.ml-1 /
-                    .inline-block.ml-1 {{ petition.signed.goal }}
+                    .inline-block.ml-1 {{ comma(petition.signed.goal) }}
 
                   p.mt-2
                     span.font-semibold 마지막 업데이트:
