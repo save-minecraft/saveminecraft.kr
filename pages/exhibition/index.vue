@@ -3,10 +3,7 @@
   div
     div.bg-yellow-100
       div.p-4.max-w-6xl.m-auto
-        .drop-shadow.my-10.mx-2.p-4.text-center
-          p.inline-block.neodgm.creative-gradient
-            | let us be
-            | creative
+        creative
         div.flex.justify-end.gap-4
           div.inline-block.text-center
             p.lv1.text-xl 셧다운제 폐지 청원
