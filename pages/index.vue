@@ -157,7 +157,8 @@ export default Vue.extend({
         },
         {
           name: '미씩몹 코리아',
-          description: '---'
+          description: '마인크래프트에 롤플레잉적 요소를 가미하는 기술적인 부분에서의 커뮤니티로, 셧다운제 폐지 청원에 함께 하고 있습니다.',
+          url: 'https://discord.gg/Ffq2ewUhQT'
         },
         {
           name: "Builder's Factory",
