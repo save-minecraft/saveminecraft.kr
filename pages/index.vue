@@ -229,8 +229,11 @@ export default Vue.extend({
     }
   },
   async mounted () {
-    const data = await this.$axios.get('/v1/petitions')
-    this.petitions = data.data
+    await this.updatePetitions()
+
+    setInterval(() => {
+      this.updatePetitions()
+    }, 60000)
   },
   methods: {
     showSponsor (sponsor: SponsorInterface) {
@@ -240,6 +243,10 @@ export default Vue.extend({
     },
     comma (num: string) {
       return `${num}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+    },
+    async updatePetitions () {
+      const data = await this.$axios.get('/v1/petitions')
+      this.petitions = data.data
     }
   }
 })

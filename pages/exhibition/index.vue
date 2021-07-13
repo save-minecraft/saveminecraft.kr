@@ -14,16 +14,79 @@
             p.lv1.text-2xl.no-kerning 07.16
             p.lv1.text-2xl.no-kerning ~07.18
     .mt-4
-    div.p-4.max-w-6xl.m-auto
-      h1.neodgm.text-3xl.text-center Under Construction
-      p.text-center This page is under construction...
+    div.p-4.max-w-6xl.m-auto.text-center
+      p.lv1.text-lg 접속 주소
+      p.neodgm.text-4xl.mt-2
+        | saveminecraft.kr
+
+      .mt-8
+      p.font-bold 24시간, 전시회 운영 기간 중 무중단으로 운영됩니다.
+      p.text-sm 일부 국가에서는 접속이 다소 불안정 할 수 있습니다.
+
+    .mt-8
+    div.p-4.max-w-6xl.m-auto.text-center(v-if="!isOpen")
+      p.lv1.text-2xl 아직 전시회장이 준비되지 않았습니다.
+      p.lv1.text-lg.mt-2 2021년 7월 16일에 다시 찾아주세요!
+
+    div.p-4.max-w-6xl.m-auto.text-center(v-else)
+      div
+        p.lv1.text-2xl
+          | 현재까지&nbsp;
+          span.font-bold {{ playerCount ? playerCount : "0" }}
+          | 명께서 의견을 함께해 주셨습니다.
+
+      .mt-8
+      div(v-if="currentlyPlaying.length > 0")
+        ul.grid.grid-cols-2.gap-4(class='sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8')
+          li(v-for='player in currentlyPlaying')
+            .group.cursor-pointer.block.rounded-lg.p-4.transition(class="hover:scale-110 hover:bg-gray-200")
+              .flex.flex-col
+                img.h-10.m-auto(:src='"https://crafatar.com/renders/head/"+player.uuid')
+                p.text-lg.lv1.mt-2 {{ player.name }}
+      div(v-else)
+        p.text-xl.lv1.font-bold.text-center 아무도 접속 해 있지 않아요.
+        p.text-center.mt-1 한번 접속해 볼까요?
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
 export default Vue.extend({
-  layout: 'default'
+  layout: 'default',
+  data () {
+    return {
+      playerCount: null,
+      currentlyPlaying: [],
+      isOpen: false
+    }
+  },
+  mounted () {
+    this.checkHasOpened()
+
+    this.loadPlayerCount()
+    this.loadCurrentlyPlaying()
+
+    setInterval(() => {
+      this.loadCurrentlyPlaying()
+    }, 10000)
+  },
+  methods: {
+    comma (num: string) {
+      return `${num}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+    },
+    checkHasOpened () {
+      this.isOpen = new Date().getTime() >= 1626393600000
+      this.isOpen = true
+    },
+    async loadPlayerCount () {
+      const data = await this.$axios.get('/v1/exhibition/players/totalCount')
+      this.playerCount = data.data.data
+    },
+    async loadCurrentlyPlaying () {
+      const data = await this.$axios.get('/v1/exhibition/players/current')
+      this.currentlyPlaying = data.data
+    }
+  }
 })
 </script>
 
