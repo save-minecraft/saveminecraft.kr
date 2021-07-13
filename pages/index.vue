@@ -178,6 +178,11 @@ export default Vue.extend({
         {
           name: "Builder's Factory",
           description: '한국과 해외를 이어주는 대표적인 디자인 커뮤니티이며, 셧다운제 관련 정보와 이슈를 해외에 조달하고 온라인 집회를 주도하고 있습니다.',
+          img: {
+            light: '/assets/sponsors/builders-factory/light.svg',
+            dark: '/assets/sponsors/builders-factory/dark.svg'
+          },
+          url: 'https://discord.gg/fGMHuM9RNV'
         },
         {
           name: 'GBF Studio',
