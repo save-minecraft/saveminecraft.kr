@@ -91,6 +91,12 @@ export default Vue.extend({
           url: 'https://github.com/axios/axios'
         },
         {
+          name: 'OpenJDK',
+          license: 'GNU GPLv2',
+          url: 'https://openjdk.java.net/',
+          icon: 'java'
+        },
+        {
           name: 'Neo둥근모 Pro',
           license: 'SIL Open Font License',
           url: 'https://github.com/Dalgona/neodgm-pro'
