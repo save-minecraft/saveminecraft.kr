@@ -72,6 +72,12 @@ export default Vue.extend({
           url: 'https://www.etnews.com/20210712000176'
         },
         {
+          title: '셧다운제 폐지 청원, 마인크래프트 게임 속 전시회로 연다',
+          publisher: '매일경제',
+          releasedAt: '2021-07-12',
+          url: 'https://www.mk.co.kr/news/it/view/2021/07/670252/'
+        },
+        {
           title: "미성년자 이용 불가 사태, '마인크래프트'로 온라인 작품 전시회 개최한다",
           publisher: '디스이즈게임',
           releasedAt: '2021-07-12',
