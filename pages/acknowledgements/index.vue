@@ -99,6 +99,26 @@ export default Vue.extend({
           name: 'Pretendard',
           license: 'SIL Open Font License',
           url: 'https://github.com/orioncactus/pretendard'
+        },
+        {
+          name: 'Spigot API',
+          license: 'GNU General Public License v3',
+          url: 'https://hub.spigotmc.org/stash/projects/SPIGOT'
+        },
+        {
+          name: 'Spigot API',
+          license: 'GNU General Public License v3',
+          url: 'https://hub.spigotmc.org/stash/projects/SPIGOT'
+        },
+        {
+          name: 'Paper',
+          license: 'GNU GPLv3 or MIT License',
+          url: 'https://github.com/PaperMC/Paper'
+        },
+        {
+          name: 'Prisma 2',
+          license: 'Apache 2.0 License',
+          url: 'https://github.com/prisma/prisma'
         }
       ]
     }
