@@ -106,11 +106,6 @@ export default Vue.extend({
           url: 'https://hub.spigotmc.org/stash/projects/SPIGOT'
         },
         {
-          name: 'Spigot API',
-          license: 'GNU General Public License v3',
-          url: 'https://hub.spigotmc.org/stash/projects/SPIGOT'
-        },
-        {
           name: 'Paper',
           license: 'GNU GPLv3 or MIT License',
           url: 'https://github.com/PaperMC/Paper'
