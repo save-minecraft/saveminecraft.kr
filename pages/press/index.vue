@@ -33,6 +33,12 @@ export default Vue.extend({
     return {
       newses: [
         {
+          title: "'마인크래프트'로 만드는 셧다운제 폐지 청원 전시회 열려",
+          publisher: '아이뉴스24',
+          releasedAt: '2021-07-12',
+          url: 'https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=105&oid=031&aid=0000610005'
+        },
+        {
           title: '미성년자 이용 불가 사태, <마인크래프트>로 온라인 작품 전시회 개최한다',
           releasedAt: '2021-07-12',
           url: 'https://cafe.naver.com/minecraftgame/1819898'
