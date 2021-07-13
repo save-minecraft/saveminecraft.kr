@@ -160,7 +160,11 @@ export default Vue.extend({
         {
           name: '마인이메이터 유저 센터 (마유센)',
           description: '마인크래프트에 기반한 애니메이션 제작 프로그램인 마인이메이터를 활용해 애니메이션, 만화, 캐릭터 등을 제작하는 창작 커뮤니티입니다.',
-          url: 'http://cafe.naver.com/minecenter1'
+          url: 'http://cafe.naver.com/minecenter1',
+          img: {
+            light: '/assets/sponsors/mineimator-user-center/light.svg',
+            dark: '/assets/sponsors/mineimator-user-center/dark.svg'
+          }
         },
         {
           name: '미씩몹 코리아',
