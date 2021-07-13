@@ -86,6 +86,11 @@ export default Vue.extend({
           url: 'https://github.com/fastify/fastify'
         },
         {
+          name: 'Axios',
+          license: 'MIT License',
+          url: 'https://github.com/axios/axios'
+        },
+        {
           name: 'Neo둥근모 Pro',
           license: 'SIL Open Font License',
           url: 'https://github.com/Dalgona/neodgm-pro'
