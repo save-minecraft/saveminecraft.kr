@@ -33,21 +33,23 @@
       .mt-8
 
       .grid.grid-cols-2.gap-4
-        div
-          h2.lv1.text-xl 전시회 주제
-          p.mt-4 마인크래프트 또는 게임의 가치를 보여줄 수 있는 작품
-          p.text-sm.mt-1 (예. 건축물, 리소스, 플러그인)
+        .flex.justify-between.flex-col.h-full
+          div.mb-8
+            h2.lv1.text-xl 전시회 주제
+            p.mt-4 마인크래프트 또는 게임의 가치를 보여줄 수 있는 작품
+            p.text-sm.mt-1 (예. 건축물, 리소스, 플러그인)
 
-          .mt-4
-          nuxt-link.display-block.btn.bg-green-600.text-white.text-sm(to="/exhibition/contents" class="hover:bg-green-800") 전시회 내용 안내
-        div
-          h2.lv1.text-xl 궁금하신 점이 있으신가요?
-          p.mt-4 우측 하단 채널톡 버튼으로 운영본부로 연락 주시면 감사하겠습니다.
-          p.text-sm.mt-1
-            span.font-bold 운영시각: 10:00 ~ 18:00
+          div
+            nuxt-link.btn.bg-green-600.text-white.text-sm(to="/exhibition/contents" class="hover:bg-green-800") 전시회 내용 안내
+        .flex.justify-between.flex-col.h-full
+          div.mb-8
+            h2.lv1.text-xl 궁금하신 점이 있으신가요?
+            p.mt-4 우측 하단 채널톡 버튼으로 운영본부로 연락 주시면 감사하겠습니다.
+            p.text-sm.mt-1
+              span.font-bold 운영시각: 10:00 ~ 18:00
 
-          .mt-4
-          a.display-block.btn.bg-green-600.text-white.text-sm(href="https://oms.channel.io" class="hover:bg-green-800") 상담 요청
+          div
+            a.btn.bg-green-600.text-white.text-sm(href="https://oms.channel.io" class="hover:bg-green-800") 상담 요청
 
     .mt-8
     div.p-4.max-w-6xl.m-auto.text-center(v-if="!isOpen")
