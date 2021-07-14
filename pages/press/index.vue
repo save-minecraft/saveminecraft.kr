@@ -52,7 +52,7 @@ export default Vue.extend({
     return {
       press: [
         {
-          title: '미성년자 이용 불가 사태, <마인크래프트>로 온라인 작품 전시회 개최한다',
+          title: '[보도자료] 미성년자 이용 불가 사태, <마인크래프트>로 온라인 작품 전시회 개최한다',
           releasedAt: '2021-07-12',
           publisher: '우리 마인크래프트 공간',
           url: 'https://cafe.naver.com/minecraftgame/1819898'
