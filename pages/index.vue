@@ -30,7 +30,7 @@
 
     .mt-4
     article.p-4.max-w-6xl.m-auto
-      h2.lv1.text-2xl.mb-1 현재 진행중인 청원
+      h2.lv1.text-2xl.mb-1 현재 진행 중인 청원
       ul.grid.grid-cols-1.gap-4(class='md:grid-cols-2')
         li(v-for='petition in petitions')
           a.group.block.rounded-lg.p-4.bg-gray-200.transition(:href='petition.url' class='hover:bg-green-500 hover:border-transparent hover:shadow-lg')
