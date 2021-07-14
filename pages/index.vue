@@ -186,7 +186,12 @@ export default Vue.extend({
         },
         {
           name: 'GBF Studio',
-          description: '---'
+          description: '마인크래프트를 도구로 삼아 새로운 예술의 지평을 열고자 하는 GBF Studio 입니다. 이번 전시회를 통해 많은 분들이 마인크래프트의 예술적 가치를 알아가셨으면 좋겠습니다.',
+          img: {
+            light: '/assets/sponsors/gbf-studio/light.svg',
+            dark: '/assets/sponsors/gbf-studio/dark.svg'
+          },
+          url: 'https://cafe.naver.com/gomgunchin'
         },
         {
           name: 'HK Dev',
@@ -195,7 +200,7 @@ export default Vue.extend({
             light: '/assets/sponsors/hk-dev/light.svg',
             dark: '/assets/sponsors/hk-dev/dark.svg'
           },
-          url: ' https://discord.gg/hkdev'
+          url: 'https://discord.gg/hkdev'
         },
         {
           name: "Pixel Creator's Place",
