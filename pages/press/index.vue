@@ -10,13 +10,12 @@
       h1.lv1.text-2xl.mb-2
         | saveminecraft.kr 소식
       ul.grid.grid-cols-1.gap-4(class='lg:grid-cols-2')
-        li(v-for='news in press')
-          a.group.block.rounded-lg.p-4.bg-gray-200.transition(:href='news.url' class='hover:bg-green-500 hover:border-transparent hover:shadow-lg')
-            dl.items-center
-              .flex.justify-between.flex-col(class="lg:flex-row lg:items-center")
+          a.group.block.rounded-lg.p-4.bg-gray-200.transition(:href='news.url' class='hover:bg-green-500 hover:border-transparent hover:shadow-lg' v-for='news in press')
+              .flex.justify-between.flex-col.h-full
                 div
                   p.leading-6.font-medium(class='group-hover:text-white')
                     | {{ news.title }}
+                div
                   p.text-sm.font-medium.text-gray-500(class='group-hover:text-green-200' v-if="news.publisher")
                     | {{ news.publisher }}
                   p.text-sm.font-medium.text-gray-500(class='group-hover:text-green-200')
@@ -29,13 +28,12 @@
       h1.lv1.text-2xl.mb-2
         | 최신 뉴스
       ul.grid.grid-cols-1.gap-4(class='lg:grid-cols-2')
-        li(v-for='news in newses')
-          a.group.block.rounded-lg.p-4.bg-gray-200.transition(:href='news.url' class='hover:bg-green-500 hover:border-transparent hover:shadow-lg')
-            dl.items-center
-              .flex.justify-between.flex-col(class="lg:flex-row lg:items-center")
+          a.group.block.rounded-lg.p-4.bg-gray-200.transition(:href='news.url' class='hover:bg-green-500 hover:border-transparent hover:shadow-lg' v-for='news in newses')
+              .flex.justify-between.flex-col.h-full
                 div
                   p.leading-6.font-medium(class='group-hover:text-white')
                     | {{ news.title }}
+                div
                   p.text-sm.font-medium.text-gray-500(class='group-hover:text-green-200' v-if="news.publisher")
                     | {{ news.publisher }}
                   p.text-sm.font-medium.text-gray-500(class='group-hover:text-green-200')
