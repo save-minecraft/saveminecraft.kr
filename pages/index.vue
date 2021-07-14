@@ -182,7 +182,7 @@ export default Vue.extend({
             light: '/assets/sponsors/gbf-studio/light.svg',
             dark: '/assets/sponsors/gbf-studio/dark.svg'
           },
-          url: 'https://cafe.naver.com/gomgunchin'
+          url: 'https://www.youtube.com/channel/UCLrPGVuzySG2D997kknpa7Q'
         },
         {
           name: 'HK Dev',
