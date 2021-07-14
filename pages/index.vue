@@ -15,17 +15,14 @@
             p.lv1.text-2xl.no-kerning ~07.18
 
         div.flex.justify-end.mt-4
-          nuxt-link.btn.bg-green-600.text-white(to="/exhibition" class="hover:bg-green-800")
-            | 자세히 알아보기
+          nuxt-link.btn.bg-green-600.text-white(to="/exhibition" class="hover:bg-green-800") 자세히 알아보기
             i.fas.fa-arrow-right.ml-2
 
     article.p-4.max-w-6xl.m-auto.mt-4
 
-      h2.lv1.text-2xl.mb-1
-        | 어쩌다 마인크래프트는 성인 게임이 되었나요?
+      h2.lv1.text-2xl.mb-1 어쩌다 마인크래프트는 성인 게임이 되었나요?
       p.mb-4 셧다운제로 인해, Xbox Live가 성인화 되며, 성인 게임이 되었습니다.
-      nuxt-link.btn.bg-green-600.text-white(to="/explain" class="hover:bg-green-800")
-        | 자세히 알아보기
+      nuxt-link.btn.bg-green-600.text-white(to="/explain" class="hover:bg-green-800") 자세히 알아보기
         i.fas.fa-arrow-right.ml-2
 
     .mt-4
@@ -37,10 +34,8 @@
             dl.items-center
               div
                 p.leading-6.font-medium(class='group-hover:text-white')
-                  i.fas.fa-edit.mr-2
-                  | {{ petition.title }}
-                p.text-sm.font-medium.text-gray-500(class='group-hover:text-green-200')
-                  | {{ petition.url.includes('president') ? "청와대 국민 청원" : "국회 국민 청원" }}
+                  i.fas.fa-edit.mr-2 {{ petition.title }}
+                p.text-sm.font-medium.text-gray-500(class='group-hover:text-green-200') {{ petition.url.includes('president') ? "청와대 국민 청원" : "국회 국민 청원" }}
 
                 div.mt-4(class='group-hover:text-green-200' v-if="petition.signed")
                   div.inline-block(class='group-hover:text-green-100')
@@ -55,9 +50,7 @@
                     progress.bg-grey-200.h-1.m-0(style="width: 100%;" max="100" :value="(petition.signed.current * 100 / petition.signed.goal)")
 
                   p.text-sm.mt-1
-                    span.font-semibold 마지막 업데이트:
-                    |
-                    | {{ $dayjs(petition.lastUpdate).fromNow() }}
+                    span.font-semibold 마지막 업데이트: {{ $dayjs(petition.lastUpdate).fromNow() }}
                 div.mt-4(v-else)
                   div 청원 정보를 가져오는 중...
     //-
@@ -91,14 +84,12 @@
       template(#footer)
         .flex.justify-between
           div
-            a.btn.bg-green-600.text-white.text-sm(v-if="currentSponsor && currentSponsor.url" :href='currentSponsor ? currentSponsor.url : "#"' class="hover:bg-green-800")
-              | 홈페이지 접속
+            a.btn.bg-green-600.text-white.text-sm(v-if="currentSponsor && currentSponsor.url" :href='currentSponsor ? currentSponsor.url : "#"' class="hover:bg-green-800") 홈페이지 접속
               i.fas.fa-arrow-right.ml-2
 
           div
             .btn.bg-red-700.text-white.text-sm.cursor-pointer(class="hover:bg-red-800" @click="openSponsorModal = false")
-              i.fas.fa-times.mr-2
-              | 닫기
+              i.fas.fa-times.mr-2 닫기
 
 </template>
 

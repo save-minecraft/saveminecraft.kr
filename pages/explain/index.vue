@@ -3,13 +3,11 @@
   div
     .my-10.mx-2.p-4.text-center
       .drop-shadow
-        p.inline-block.neodgm.text-4xl
-          | 셧다운제와 마인크래프트
+        p.inline-block.neodgm.text-4xl 셧다운제와 마인크래프트
       p.text-2xl.mt-4 현재 마인크래프트를 둘러싸고 일어나고 있는 일을 설명합니다.
 
     article.p-4.max-w-6xl.m-auto
-      h1.lv1.text-2xl.mb-2
-        | 어쩌다 마인크래프트는 성인 게임이 되었나요?
+      h1.lv1.text-2xl.mb-2 어쩌다 마인크래프트는 성인 게임이 되었나요?
       p 지난해 10월 21일, 마인크래프트의 개발사 Mojang Studios는 Java Edition의 계정 시스템을 Microsoft 계정으로 올해 안에 통합할 것을 예고하였습니다.
       p Minecraft: Java Edition이 사용하던 Mojang 계정은 기존부터 2차인증, 적절하지 않은 인증 토큰 인증방식으로 인해, 보안적으로 취약한 설계를 가지고 있었습니다.
       p 이에 따라, Mojang Studios는 계정 해킹등의 문제를 인지하고, 이를 강화하기 위하여 이를 모두 Microsoft 계정으로 이관하기로 결정하였습니다.

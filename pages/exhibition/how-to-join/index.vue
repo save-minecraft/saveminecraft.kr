@@ -3,8 +3,7 @@
   div
     .my-10.mx-2.p-4.text-center
       .drop-shadow
-        p.inline-block.neodgm.text-4xl
-          | 전시회 접속 방법
+        p.inline-block.neodgm.text-4xl 전시회 접속 방법
 
     .mt-4
     div.p-4.max-w-6xl.m-auto.text-center

@@ -1,9 +1,4 @@
 export default {
-  // Just-in-time compilation
-  tailwindcss: {
-    jit: true
-  },
-
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'saveminecraft.kr',
