@@ -1,8 +1,8 @@
 
 <template lang="pug">
   div
-    div.bg-yellow-100
-      div.p-4.max-w-6xl.m-auto
+    .bg-yellow-100
+      .p-4.max-w-6xl.m-auto
         creative
         div.flex.justify-end.gap-4
           div.inline-block.text-center
@@ -13,6 +13,27 @@
             p.lv1.text-lg.no-kerning 2021.
             p.lv1.text-2xl.no-kerning 07.16
             p.lv1.text-2xl.no-kerning ~07.18
+
+    .bg-gray-100(v-if="isOpen")
+      .p-4.max-w-6xl.m-auto
+        p.lv1.text-center.text-xl
+          | 현재까지&nbsp;
+          span.font-bold {{ playerCount }}
+          | 명이 함께 해 주셨습니다.
+
+        .mt-4(v-if="currentlyPlaying.length > 0")
+          ul.grid.grid-cols-2.justify-between.gap-4(class='md:grid-cols-4 lg:grid-cols-5')
+            li(v-for='player in currentlyPlaying')
+              .group.block.rounded-lg.h-8.p-1.px-2.transition(class="hover:scale-110 hover:bg-green-800")
+                .inline-flex.flex-row.h-full.content-center.place-items-center
+                  img.rounded-sm.h-full.mr-4(:src='"https://crafatar.com/avatars/"+player.uuid+"?overlay"')
+                  p.text-lg.lv1.max-w-full.truncate(class="group-hover:text-green-200") {{ player.name }}
+    .bg-gray-100.py-4(v-else)
+      .text-center
+        p.lv1.text-lg
+          | 2021년 7월 16일, 전시회 개장 예정입니다.
+          i.fas.fa-arrow-down.ml-2.cursor-pointer.animate-bounce(@click="setItOpen()")
+
     .mt-4
     div.p-4.max-w-6xl.m-auto.text-center
       p.lv1.text-lg 접속 주소
@@ -52,28 +73,12 @@
             a.btn.bg-green-600.text-white.text-sm(href="https://oms.channel.io" class="hover:bg-green-800") 상담 요청
 
     .mt-8
-    div.p-4.max-w-6xl.m-auto.text-center(v-if="!isOpen")
+    .p-4.max-w-6xl.m-auto.text-center(v-if="!isOpen")
       p.lv1.text-2xl 아직 전시회장이 준비되지 않았습니다.
       p.lv1.text-lg.mt-2 2021년 7월 16일에 다시 찾아주세요!
+    .p-4.max-w-6xl.m-auto.text-center(v-else)
+      p.lv1.text-2xl 여기에 방명록 추가
 
-    div.p-4.max-w-6xl.m-auto.text-center(v-else)
-      div
-        p.lv1.text-2xl
-          | 현재까지&nbsp;
-          span.font-bold {{ playerCount ? playerCount : "0" }}
-          | 명께서 의견을 함께해 주셨습니다.
-
-      .mt-8
-      div(v-if="currentlyPlaying.length > 0")
-        ul.grid.grid-cols-2.gap-4(class='md:grid-cols-4 xl:grid-cols-6')
-          li(v-for='player in currentlyPlaying')
-            .group.cursor-pointer.block.rounded-lg.p-4.transition(class="hover:scale-110 hover:bg-gray-200")
-              .flex.flex-col
-                img.h-10.m-auto(:src='"https://crafatar.com/renders/head/"+player.uuid')
-                p.text-lg.lv1.mt-2 {{ player.name }}
-      div(v-else)
-        p.text-xl.lv1.font-bold.text-center 아무도 접속 해 있지 않아요.
-        p.text-center.mt-1 한번 접속해 볼까요?
 </template>
 
 <script lang="ts">
@@ -84,7 +89,9 @@ export default Vue.extend({
   data () {
     return {
       playerCount: null,
-      currentlyPlaying: [],
+      currentlyPlaying: [
+
+      ],
       isOpen: false
     }
   },
@@ -102,9 +109,11 @@ export default Vue.extend({
     comma (num: string) {
       return `${num}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
     },
+    setItOpen () {
+      this.isOpen = true
+    },
     checkHasOpened () {
       this.isOpen = new Date().getTime() >= 1626393600000
-      this.isOpen = true
     },
     async loadPlayerCount () {
       const data = await this.$axios.get('/v1/exhibition/players/totalCount')

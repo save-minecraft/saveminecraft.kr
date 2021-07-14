@@ -145,6 +145,9 @@ html {
   .bg-white {
     background-color: rgba(7, 9, 15, var(--tw-bg-opacity));
   }
+  .bg-gray-100 {
+    @apply bg-gray-900;
+  }
   .bg-gray-200 {
     @apply bg-gray-800;
   }
