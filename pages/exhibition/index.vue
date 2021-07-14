@@ -23,6 +23,36 @@
       p.font-bold 24시간, 전시회 운영 기간 중 무중단으로 운영됩니다.
       p.text-sm 일부 국가에서는 접속이 다소 불안정 할 수 있습니다.
 
+      .mt-4
+      nuxt-link.display-block.btn.bg-green-600.text-white.text-sm(to="/exhibition/how-to-join" class="hover:bg-green-800")
+        | 어떻게 접속하나요?
+        i.fas.fa-arrow-right.ml-2
+
+      .mt-8
+      hr.hr.border-gray-200
+      .mt-8
+
+      .grid.grid-cols-2.gap-4
+        div
+          h2.lv1.text-xl 전시회 주제
+          p.mt-4 마인크래프트 또는 게임의 가치를 보여줄 수 있는 작품
+          p.text-sm.mt-1 (예. 건축물, 리소스, 플러그인)
+
+          .mt-4
+          a.display-block.btn.bg-green-600.text-white.text-sm(href="https://www.minecraft.net/en-us/store/minecraft-java-edition" class="hover:bg-green-800")
+            | 마인크래프트 Java Edition 구매 페이지
+            i.fas.fa-arrow-right.ml-2
+        div
+          h2.lv1.text-xl 궁금하신 점이 있으신가요?
+          p.mt-4 우측 하단 채널톡 버튼으로 운영본부로 연락 주시면 감사하겠습니다.
+          p.text-sm.mt-1
+            span.font-bold 운영시각:
+            | 10:00 ~ 18:00
+
+          .mt-4
+          a.display-block.btn.bg-green-600.text-white.text-sm(href="https://cafe.naver.com/minecraftgame/1818764" class="hover:bg-green-800")
+            | 전시회 개최 정보 안내
+
     .mt-8
     div.p-4.max-w-6xl.m-auto.text-center(v-if="!isOpen")
       p.lv1.text-2xl 아직 전시회장이 준비되지 않았습니다.
@@ -37,7 +67,7 @@
 
       .mt-8
       div(v-if="currentlyPlaying.length > 0")
-        ul.grid.grid-cols-2.gap-4(class='sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8')
+        ul.grid.grid-cols-2.gap-4(class='md:grid-cols-4 xl:grid-cols-6')
           li(v-for='player in currentlyPlaying')
             .group.cursor-pointer.block.rounded-lg.p-4.transition(class="hover:scale-110 hover:bg-gray-200")
               .flex.flex-col
