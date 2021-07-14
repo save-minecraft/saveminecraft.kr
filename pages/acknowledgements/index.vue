@@ -3,12 +3,10 @@
   div
     .my-10.mx-2.p-4.text-center
       .drop-shadow
-        p.inline-block.neodgm.text-4xl
-          | 오픈소스 프로젝트
+        p.inline-block.neodgm.text-4xl 오픈소스 프로젝트
 
     article.p-4.max-w-6xl.m-auto
-      h1.lv1.text-2xl.mb-2
-        | 사용된 오픈소스 프로젝트
+      h1.lv1.text-2xl.mb-2 사용된 오픈소스 프로젝트
       ul.grid.grid-cols-1.gap-4(class='md:grid-cols-2 lg:grid-cols-3')
         li(v-for='project in projects')
           a.group.block.rounded-lg.p-4.bg-gray-200.transition(:href='project.url' class='hover:bg-green-500 hover:border-transparent hover:shadow-lg')
@@ -16,10 +14,8 @@
               .flex.justify-between.flex-col(class="lg:flex-row lg:items-center")
                 div
                   p.leading-6.font-medium(class='group-hover:text-white')
-                    i.mr-2(:class='project.icon ? "fab fa-"+project.icon : "far fa-file-code"')
-                    | {{ project.name }}
-                  p.text-sm.font-medium.text-gray-500(class='group-hover:text-green-200')
-                    | {{ project.license }}
+                    i.mr-2(:class='project.icon ? "fab fa-"+project.icon : "far fa-file-code"') {{ project.name }}
+                  p.text-sm.font-medium.text-gray-500(class='group-hover:text-green-200') {{ project.license }}
 
 </template>
 

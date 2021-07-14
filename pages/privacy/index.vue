@@ -3,8 +3,7 @@
   div
     .my-10.mx-2.p-4.text-center
       .drop-shadow
-        p.inline-block.neodgm.text-4xl
-          | 개인정보 처리방침
+        p.inline-block.neodgm.text-4xl 개인정보 처리방침
 
     article.p-4.max-w-6xl.m-auto
       p saveminecraft.kr (이하 세이브 마인크래프트)은 「개인정보 보호법」제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리지침을 수립·공개합니다.
