@@ -34,7 +34,8 @@
             dl.items-center
               div
                 p.leading-6.font-medium(class='group-hover:text-white')
-                  i.fas.fa-edit.mr-2 {{ petition.title }}
+                  i.fas.fa-edit.mr-2
+                  | {{ petition.title }}
                 p.text-sm.font-medium.text-gray-500(class='group-hover:text-green-200') {{ petition.url.includes('president') ? "청와대 국민 청원" : "국회 국민 청원" }}
 
                 div.mt-4(class='group-hover:text-green-200' v-if="petition.signed")
@@ -89,7 +90,8 @@
 
           div
             .btn.bg-red-700.text-white.text-sm.cursor-pointer(class="hover:bg-red-800" @click="openSponsorModal = false")
-              i.fas.fa-times.mr-2 닫기
+              i.fas.fa-times.mr-2
+              | 닫기
 
 </template>
 

@@ -21,7 +21,7 @@
       .mt-8
 
       h1.lv1.text-2xl.mb-2 최신 뉴스
-      ul.grid.grid-cols-1.gap-4(class='lg:grid-cols-2')
+      .grid.grid-cols-1.gap-4(class='lg:grid-cols-2')
           a.group.block.rounded-lg.p-4.bg-gray-200.transition(:href='news.url' class='hover:bg-green-500 hover:border-transparent hover:shadow-lg' v-for='news in newses')
               .flex.justify-between.flex-col.h-full
                 div

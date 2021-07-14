@@ -16,11 +16,13 @@
     .mt-4
     div.p-4.max-w-6xl.m-auto.text-center
       p.lv1.text-lg 접속 주소
-      p.neodgm.text-4xl.mt-2 saveminecraft.kr
+      p.mt-2
+        span.neodgm.text-4xl saveminecraft.kr
+        span.text-blue-500.cursor-pointer.ml-2(@click="copyString('saveminecraft.kr', '서버주소 란')") 복사
 
       .mt-8
       p.font-bold 24시간, 전시회 운영 기간 중 무중단으로 운영됩니다.
-      p.text-sm 일부 국가에서는 접속이 다소 불안정 할 수 있습니다.
+      p.text-sm 일부 국가에서는 접속이 불가할 수 있습니다.
 
       .mt-4
       nuxt-link.display-block.btn.bg-green-600.text-white.text-sm(to="/exhibition/how-to-join" class="hover:bg-green-800") 어떻게 접속하나요?
@@ -37,8 +39,7 @@
           p.text-sm.mt-1 (예. 건축물, 리소스, 플러그인)
 
           .mt-4
-          a.display-block.btn.bg-green-600.text-white.text-sm(href="https://www.minecraft.net/en-us/store/minecraft-java-edition" class="hover:bg-green-800") 마인크래프트 Java Edition 구매 페이지
-            i.fas.fa-arrow-right.ml-2
+          nuxt-link.display-block.btn.bg-green-600.text-white.text-sm(to="/exhibition/contents" class="hover:bg-green-800") 전시회 내용 안내
         div
           h2.lv1.text-xl 궁금하신 점이 있으신가요?
           p.mt-4 우측 하단 채널톡 버튼으로 운영본부로 연락 주시면 감사하겠습니다.
@@ -46,7 +47,7 @@
             span.font-bold 운영시각: 10:00 ~ 18:00
 
           .mt-4
-          a.display-block.btn.bg-green-600.text-white.text-sm(href="https://cafe.naver.com/minecraftgame/1818764" class="hover:bg-green-800") 전시회 개최 정보 안내
+          a.display-block.btn.bg-green-600.text-white.text-sm(href="https://oms.channel.io" class="hover:bg-green-800") 상담 요청
 
     .mt-8
     div.p-4.max-w-6xl.m-auto.text-center(v-if="!isOpen")
@@ -110,6 +111,12 @@ export default Vue.extend({
     async loadCurrentlyPlaying () {
       const data = await this.$axios.get('/v1/exhibition/players/current')
       this.currentlyPlaying = data.data
+    },
+    async copyString (string: string, destination?: string) {
+      if (process.client) {
+        await navigator.clipboard.writeText(string)
+        alert(`클립보드에 복사가 완료되었습니다. ${navigator.platform.includes('Mac') ? 'Cmd' : 'Ctrl'}+V 로 ${destination !== undefined ? destination : '원하는 곳'}에 붙여 넣으세요.`)
+      }
     }
   }
 })
