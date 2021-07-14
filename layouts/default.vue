@@ -25,9 +25,10 @@
         div
           p.font-light &copy; saveminecraft.kr
           p.text-sm Minecraft는 Mojang AB의 상표이며, saveminecraft.kr 은 Mojang AB의 공식 사이트가 아닙니다.
-        div
-          nuxt-link.text-blue-500.mr-2(to="/privacy") 개인정보 처리방침
-          nuxt-link.text-blue-500(to="/acknowledgements") 오픈소스
+        div.text-sm.mt-2(class="md:mt-0")
+            nuxt-link.text-blue-500.mr-2(to="/privacy") 개인정보 처리방침
+            nuxt-link.text-blue-500.mr-2(to="/acknowledgements") 오픈소스
+            a.text-blue-500(href="https://github.com/save-minecraft") GitHub
 </template>
 
 <script>
