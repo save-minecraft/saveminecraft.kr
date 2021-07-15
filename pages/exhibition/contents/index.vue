@@ -34,7 +34,7 @@
         .flex.justify-between.mt-4
           div
             a.btn.bg-green-600.text-white.text-sm(v-if="modal && modal.url" :href='modal ? modal.url : "#"' class="hover:bg-green-800")
-              | {{ modal.urlText ? modal.urlText : "웹페이지 배포 시작" }}
+              | {{ modal.urlText ? modal.urlText : "설명 웹페이지 접속" }}
               i.fas.fa-arrow-right.ml-2
 
           div
@@ -83,7 +83,7 @@ export default Vue.extend({
           title: '0 사향(CivetKitty)',
           createdBy: '바윗돌 깨뜨려',
           description: '한국 동요를 바탕으로 만든 작품입니다. 바윗덩어리가 점점 더 작은 낱알들로 쪼개지는 것을 표현한 가사에서 영감을 받아서 마인크래프트에 있는 돌 절단기 아이템으로 조합법을 추가했습니다.\n서바이벌 환경에서의 실용성도 고려하여 피스톤을 이용한 자동화까지 염두를 하고 설계하였습니다.',
-          url: 'https://cafe.naver.com/minecraftgame/1819313'
+          url: 'https://cafe.naver.com/minecraftgame/1819242'
         },
         {
           title: '도화 걷길',
@@ -105,7 +105,7 @@ export default Vue.extend({
           description: `만화 베르세르크에 등장하는 "가츠"라는 남자 주인공의 동상 건축입니다.
 얼마전 만화작가님의 서거를 추모하기 위해 만화의 일부분을 입체적으로 건축하여 작가님의 추모 기념비로 제작 해 보았습니다.
 명암과 마인크래프트 블럭들을 이용한 표현 방법이 이 동상건축의 관전포인트가 되겠습니다.`,
-          url: 'https://cafe.naver.com/minecraftgame/1819693'
+          url: 'https://cafe.naver.com/minecraftgame/1819978'
         },
         {
           title: '공주열차',
@@ -140,14 +140,14 @@ export default Vue.extend({
           url: 'https://cafe.naver.com/minecraftgame/1819670'
         },
         {
-          title: '미초',
-          createdBy: '실생활 물건들',
+          title: '실생활 물건들',
+          createdBy: '미초',
           description: '우리가 흔히들 사용하는 스마트폰과 같은 물건들을 보다 정교하고 세세하게 표현하고 싶어서 만들었습니다.\n마크를 통하여 세상을 조금 더 세세하게 바라보자는 계기로 해상도가 높고 디테일 한 작품을 표현하고 싶어 차근차근 천천히 만들었던 모델링들을 올려보았습니다.',
           url: 'https://cafe.naver.com/minecraftgame/1819303'
         },
         {
-          title: '일천',
-          createdBy: '경매장 플러그인 외 2종',
+          title: '경매장 플러그인 외 2종',
+          createdBy: '일천',
           description: `경매장 플러그인 - 다수의 유저간의 거래를 도와주는 플러그인입니다.
 랜덤PvP플러그인 - 랜덤PvP라는 컨텐츠에 사용되었던 플러그인입니다. 매 판마다 다양한 변수가 존재해 재미를 줄 수 있습니다.
 직업 플러그인 - 마인크래프트에 없었던 다양한 직업들을 추가해 주는 플러그인입니다.`,
