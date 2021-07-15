@@ -22,12 +22,25 @@
           | 명이 함께 해 주셨습니다.
 
         .mt-4(v-if="currentlyPlaying.length > 0")
-          ul.grid.grid-cols-2.justify-between.gap-4(class='md:grid-cols-4 lg:grid-cols-5')
+          p.lv1.text-center.text-lg.mt-1
+            | 현재&nbsp;
+            span.font-bold {{ currentlyPlaying.length }}
+            | 명이 함께 해 주시고 계십니다.
+
+          ul.mt-4.grid.grid-cols-2.justify-between.gap-4(class='md:grid-cols-4 lg:grid-cols-5')
             li(v-for='player in currentlyPlaying')
               .group.block.rounded-lg.h-8.p-1.px-2.transition(class="hover:scale-110 hover:bg-green-600")
                 .inline-flex.flex-row.h-full.content-center.place-items-center
                   img.rounded-sm.h-full.mr-4(:src='"https://crafatar.com/avatars/"+player.uuid+"?overlay"')
                   p.text-lg.lv1.max-w-full.truncate(class="group-hover:text-green-200") {{ player.name }}
+
+        .mt-4(v-else)
+          p.lv1.text-center.text-xl.mt-2
+            | 아무도 접근하지 않았습니다.
+
+        .flex.justify-end.gap-4.mt-4
+          nuxt-link.btn.bg-green-600.p-0.text-white(to="/exhibition/players" class="hover:bg-green-800 hover:translate-x-1") 모든 플레이어 보기
+            i.fas.fa-arrow-right.ml-2
 
     .bg-gray-100.py-4(v-else)
       .text-center
@@ -47,7 +60,7 @@
       p.text-sm 일부 국가에서는 접속이 불가할 수 있습니다.
 
       .mt-4
-      nuxt-link.display-block.btn.bg-green-600.text-white.text-sm(to="/exhibition/how-to-join" class="hover:bg-green-800") 어떻게 접속하나요?
+      nuxt-link.display-block.btn.bg-green-600.text-white.text-sm(to="/exhibition/how-to-join" class="hover:bg-green-800 hover:translate-x-1") 어떻게 접속하나요?
         i.fas.fa-arrow-right.ml-2
 
       .mt-8
@@ -62,7 +75,7 @@
             p.text-sm.mt-1 (예. 건축물, 리소스, 플러그인)
 
           div
-            nuxt-link.btn.bg-green-600.text-white.text-sm(to="/exhibition/contents" class="hover:bg-green-800") 전시회 내용 안내
+            nuxt-link.btn.bg-green-600.text-white.text-sm(to="/exhibition/contents" class="hover:bg-green-800 hover:translate-x-1") 전시회 내용 안내
         .flex.justify-between.flex-col.h-full
           div.mb-8
             h2.lv1.text-xl 궁금하신 점이 있으신가요?
@@ -71,11 +84,11 @@
               span.font-bold 운영시각: 10:00 ~ 18:00
 
           div
-            a.btn.bg-green-600.text-white.text-sm(href="https://oms.channel.io" class="hover:bg-green-800") 상담 요청
+            a.btn.bg-green-600.text-white.text-sm(href="https://oms.channel.io" class="hover:bg-green-800 hover:translate-x-1") 상담 요청
 
     .mt-8
     .p-4.max-w-6xl.m-auto.text-center(v-if="!isOpen")
-      p.lv1.text-2xl 아직 전시회장이 준비되지 않았습니다.
+      p.lv1.text-3xl 아직 전시회장이 준비되지 않았습니다.
       p.lv1.text-lg.mt-2 2021년 7월 16일에 다시 찾아주세요!
     .p-4.max-w-6xl.m-auto.text-center(v-else)
       p.lv1.text-2xl 방명록
@@ -96,7 +109,7 @@
                   p.text-xs.mt-1.text-gray-700 {{ guestbook.uuid }}
       template(v-else)
         p.text-xl.lv1 방명록이 비어있습니다
-        p.mt-2 서버에 접속해 방명록을 적어보세요.
+        p 서버에 접속해 방명록을 적어보세요.
 
 </template>
 
