@@ -8,6 +8,13 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'title', name: 'title', content: '마인크래프트 성인화 반대' },
+      { hid: 'description', name: 'description', content: '마인크래프트 미성년자 이용 불가 사태의 배경이자 모든 게이머를 불편하게 하는 셧다운제의 폐지를 요구합니다.' },
+      { hid: 'og:site_type', name: 'og:site_type', content: 'article' },
+      { hid: 'og:site_name', name: 'og:site_name', content: 'saveminecraft.kr' },
+      { hid: 'og:title', name: 'og:title', content: '마인크래프트 성인화 반대' },
+      { hid: 'og:content', name: 'og:content', content: '마인크래프트 미성년자 이용 불가 사태의 배경이자 모든 게이머를 불편하게 하는 셧다운제의 폐지를 요구합니다.' },
+      { hid: 'og:url', name: 'og:url', content: 'https://saveminecraft.kr' },
       { hid: 'og:image', name: 'og:image', content: 'https://i.imgur.com/jiWrWFv.png' }
     ],
     link: [
