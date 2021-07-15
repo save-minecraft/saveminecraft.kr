@@ -24,7 +24,7 @@
         .mt-4(v-if="currentlyPlaying.length > 0")
           ul.grid.grid-cols-2.justify-between.gap-4(class='md:grid-cols-4 lg:grid-cols-5')
             li(v-for='player in currentlyPlaying')
-              .group.block.rounded-lg.h-8.p-1.px-2.transition(class="hover:scale-110 hover:bg-green-800")
+              .group.block.rounded-lg.h-8.p-1.px-2.transition(class="hover:scale-110 hover:bg-green-600")
                 .inline-flex.flex-row.h-full.content-center.place-items-center
                   img.rounded-sm.h-full.mr-4(:src='"https://crafatar.com/avatars/"+player.uuid+"?overlay"')
                   p.text-lg.lv1.max-w-full.truncate(class="group-hover:text-green-200") {{ player.name }}
