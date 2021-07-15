@@ -77,7 +77,21 @@
       p.lv1.text-2xl 아직 전시회장이 준비되지 않았습니다.
       p.lv1.text-lg.mt-2 2021년 7월 16일에 다시 찾아주세요!
     .p-4.max-w-6xl.m-auto.text-center(v-else)
-      p.lv1.text-2xl 여기에 방명록 추가
+      p.lv1.text-2xl 방명록
+      p 전시회장 내에서 작성한 방명록입니다.
+
+      .mt-4
+      .grid.grid-cols-1.gap-4(class='md:grid-cols-2 lg:grid-cols-3')
+        .group.block.rounded-lg.p-4.bg-gray-200.transition.cursor-pointer(@click='goDevMode()' class='hover:bg-green-500 hover:border-transparent hover:shadow-lg' v-for='guestbook in guestbooks')
+          .flex.justify-between.flex-col.h-full
+            div
+              img.inline-block.h-6.rounded-sm.h-full.mr-4(:src='"https://crafatar.com/avatars/"+guestbook.player.uuid+"?overlay"')
+              span.lv1.text-xl {{ guestbook.player.name }}
+            div.mt-4
+              .font-medium.text-gray-500(class='group-hover:text-green-200' v-if="guestbook.content" v-for="line in splitLines(guestbook.content)")
+                p.text-sm {{ line ? line : "&nbsp;" }}
+              template(v-if="developerMode")
+                p.text-xs.mt-1.text-gray-700 {{ guestbook.uuid }}
 
 </template>
 
@@ -89,10 +103,11 @@ export default Vue.extend({
   data () {
     return {
       playerCount: null,
-      currentlyPlaying: [
-
-      ],
-      isOpen: false
+      currentlyPlaying: [],
+      guestbooks: [],
+      isOpen: false,
+      developerMode: false,
+      devModeCount: 0
     }
   },
   head () {
@@ -119,9 +134,11 @@ export default Vue.extend({
 
     this.loadPlayerCount()
     this.loadCurrentlyPlaying()
+    this.loadGuestbooks()
 
     setInterval(() => {
       this.loadCurrentlyPlaying()
+      this.loadGuestbooks()
     }, 10000)
   },
   methods: {
@@ -130,9 +147,17 @@ export default Vue.extend({
     },
     setItOpen () {
       this.isOpen = true
+      this.developerMode = true
+    },
+    goDevMode () {
+      this.devModeCount++
+      if (this.devModeCount > 10) {
+        this.developerMode = true
+      }
     },
     checkHasOpened () {
       this.isOpen = new Date().getTime() >= 1626408000000
+      this.isOpen = true
     },
     async loadPlayerCount () {
       const data = await this.$axios.get('/v1/exhibition/players/totalCount')
@@ -142,11 +167,18 @@ export default Vue.extend({
       const data = await this.$axios.get('/v1/exhibition/players/current')
       this.currentlyPlaying = data.data
     },
+    async loadGuestbooks () {
+      const data = await this.$axios.get('/v1/exhibition/guestbooks')
+      this.guestbooks = data.data
+    },
     async copyString (string: string, destination?: string) {
       if (process.client) {
         await navigator.clipboard.writeText(string)
         alert(`클립보드에 복사가 완료되었습니다. ${navigator.platform.includes('Mac') ? 'Cmd' : 'Ctrl'}+V 로 ${destination !== undefined ? destination : '원하는 곳'}에 붙여 넣으세요.`)
       }
+    },
+    splitLines (string: string) {
+      return string.split('\n')
     }
   }
 })

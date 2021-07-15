@@ -70,9 +70,9 @@
           .group.cursor-pointer.block.rounded-lg.p-4.transition(@click='showSponsor(sponsor)' class="hover:scale-110 hover:bg-gray-200")
             dl.items-center.align-middle
               template(v-if='sponsor.img && sponsor.img.light')
-                picture.h-10
+                picture.h-16
                   source(:srcset='sponsor.img.dark' media='(prefers-color-scheme: dark)' v-if='sponsor.img.dark')
-                  img.h-10.m-auto(:src='sponsor.img.light')
+                  img.h-16.m-auto(:src='sponsor.img.light')
               template(v-else)
                 p.text-xl.lv1.text-center {{ sponsor.name }}
 
