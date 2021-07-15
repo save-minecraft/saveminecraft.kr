@@ -221,6 +221,24 @@ export default Vue.extend({
       openSponsorModal: false
     }
   },
+  head () {
+    const title = 'saveminecraft.kr'
+    const description = '마인크래프트 미성년자 이용 불가 사태의 배경이자 모든 게이머를 불편하게 하는 셧다운제의 폐지를 요구합니다.'
+    return {
+      title,
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'title', name: 'title', content: title },
+        { hid: 'description', name: 'description', content: description },
+        { hid: 'og:site_name', name: 'og:site_name', content: 'saveminecraft.kr' },
+        { hid: 'og:type', name: 'og:type', content: 'article' },
+        { hid: 'og:title', name: 'og:title', content: title },
+        { hid: 'og:description', name: 'og:description', content: description },
+        { hid: 'og:url', name: 'og:url', content: 'https://saveminecraft.kr' }
+      ]
+    }
+  },
   async mounted () {
     await this.updatePetitions()
 

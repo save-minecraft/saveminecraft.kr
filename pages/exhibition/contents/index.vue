@@ -183,8 +183,9 @@ export default Vue.extend({
         { hid: 'title', name: 'title', content: title },
         { hid: 'description', name: 'description', content: description },
         { hid: 'og:site_name', name: 'og:site_name', content: 'saveminecraft.kr' },
+        { hid: 'og:type', name: 'og:type', content: 'article' },
         { hid: 'og:title', name: 'og:title', content: title },
-        { hid: 'og:content', name: 'og:content', content: description },
+        { hid: 'og:description', name: 'og:description', content: description },
         { hid: 'og:url', name: 'og:url', content: 'https://saveminecraft.kr' }
       ]
     }
