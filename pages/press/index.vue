@@ -92,6 +92,24 @@ export default Vue.extend({
         }
       ]
     }
+  },
+  head () {
+    const title = '보도 자료'
+    const description = 'saveminecraft.kr 에서 제공하는 보도 자료 및 관련 언론보도 내용입니다.'
+
+    return {
+      title,
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'title', name: 'title', content: title },
+        { hid: 'description', name: 'description', content: description },
+        { hid: 'og:site_name', name: 'og:site_name', content: 'saveminecraft.kr' },
+        { hid: 'og:title', name: 'og:title', content: title },
+        { hid: 'og:content', name: 'og:content', content: description },
+        { hid: 'og:url', name: 'og:url', content: 'https://saveminecraft.kr' }
+      ]
+    }
   }
 })
 </script>

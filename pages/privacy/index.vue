@@ -93,7 +93,24 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  layout: 'default'
+  layout: 'default',
+  head () {
+    const title = '개인정보 처리방침'
+    const description = 'saveminecraft.kr 에서 개인정보를 어떻게 처리하는 지에 대해 설명합니다.'
+    return {
+      title,
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'title', name: 'title', content: title },
+        { hid: 'description', name: 'description', content: description },
+        { hid: 'og:site_name', name: 'og:site_name', content: 'saveminecraft.kr' },
+        { hid: 'og:title', name: 'og:title', content: title },
+        { hid: 'og:content', name: 'og:content', content: description },
+        { hid: 'og:url', name: 'og:url', content: 'https://saveminecraft.kr' }
+      ]
+    }
+  }
 })
 </script>
 

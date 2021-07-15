@@ -3,7 +3,7 @@
   div
     .my-10.mx-2.p-4.text-center
       .drop-shadow
-        h1.inline-block.neodgm.text-4xl 전시회 접속 방법
+        h1.inline-block.neodgm.text-4xl 어떻게 접속하나요?
 
     .mt-4
     div.p-4.max-w-6xl.m-auto
@@ -115,6 +115,24 @@ export default Vue.extend({
         urlText: ''
       },
       openModal: false
+    }
+  },
+  head () {
+    const title = '어떻게 접속하나요?'
+    const description = '셧다운제 폐지 청원 전시회에 접속하는 방법을 여기서 확인 하실 수 있습니다.'
+
+    return {
+      title,
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'title', name: 'title', content: title },
+        { hid: 'description', name: 'description', content: description },
+        { hid: 'og:site_name', name: 'og:site_name', content: 'saveminecraft.kr' },
+        { hid: 'og:title', name: 'og:title', content: title },
+        { hid: 'og:content', name: 'og:content', content: description },
+        { hid: 'og:url', name: 'og:url', content: 'https://saveminecraft.kr' }
+      ]
     }
   },
   methods: {

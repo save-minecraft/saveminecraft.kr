@@ -125,6 +125,24 @@ export default Vue.extend({
         }
       ]
     }
+  },
+  head () {
+    const title = '오픈소스 프로젝트'
+    const description = 'saveminecraft.kr 그리고 전시회를 구축하기 위해 사용된 오픈소스 프로젝트입니다.'
+
+    return {
+      title,
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'title', name: 'title', content: title },
+        { hid: 'description', name: 'description', content: description },
+        { hid: 'og:site_name', name: 'og:site_name', content: 'saveminecraft.kr' },
+        { hid: 'og:title', name: 'og:title', content: title },
+        { hid: 'og:content', name: 'og:content', content: description },
+        { hid: 'og:url', name: 'og:url', content: 'https://saveminecraft.kr' }
+      ]
+    }
   }
 })
 </script>

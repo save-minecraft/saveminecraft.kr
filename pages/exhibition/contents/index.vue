@@ -171,6 +171,24 @@ export default Vue.extend({
       openModal: false
     }
   },
+  head () {
+    const title = '전시 내용'
+    const description = '셧다운제 폐지 청원 전시회에 전시되는 마인크래프트 커뮤니티에서 제작한 콘텐츠들을 소개합니다'
+
+    return {
+      title,
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'title', name: 'title', content: title },
+        { hid: 'description', name: 'description', content: description },
+        { hid: 'og:site_name', name: 'og:site_name', content: 'saveminecraft.kr' },
+        { hid: 'og:title', name: 'og:title', content: title },
+        { hid: 'og:content', name: 'og:content', content: description },
+        { hid: 'og:url', name: 'og:url', content: 'https://saveminecraft.kr' }
+      ]
+    }
+  },
   methods: {
     splitLines (string: string) {
       return string.split('\n')

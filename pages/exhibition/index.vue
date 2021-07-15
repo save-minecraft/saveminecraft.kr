@@ -95,6 +95,24 @@ export default Vue.extend({
       isOpen: false
     }
   },
+  head () {
+    const title = '셧다운제 폐지 청원 전시회'
+    const description = '셧다운제 폐지를 위한 전시회가 7월 16일 오후 1시부터 시작됩니다!'
+
+    return {
+      title,
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'title', name: 'title', content: title },
+        { hid: 'description', name: 'description', content: description },
+        { hid: 'og:site_name', name: 'og:site_name', content: 'saveminecraft.kr' },
+        { hid: 'og:title', name: 'og:title', content: title },
+        { hid: 'og:content', name: 'og:content', content: description },
+        { hid: 'og:url', name: 'og:url', content: 'https://saveminecraft.kr' }
+      ]
+    }
+  },
   mounted () {
     this.checkHasOpened()
 
