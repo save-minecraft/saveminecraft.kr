@@ -157,7 +157,6 @@ export default Vue.extend({
     },
     checkHasOpened () {
       this.isOpen = new Date().getTime() >= 1626408000000
-      this.isOpen = true
     },
     async loadPlayerCount () {
       const data = await this.$axios.get('/v1/exhibition/players/totalCount')
