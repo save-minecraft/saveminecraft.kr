@@ -135,7 +135,7 @@ export default Vue.extend({
             light: '/assets/sponsors/goldbigdragon/logo.svg'
           },
           name: '김태룡 카페',
-          description: '---',
+          description: '김태룡 카페는 \'배운 만큼 가르치자\' 슬로건 아래, 마인크래프트 내 스크립팅, 프로그래밍, 모델링 등 다양한 질문과 답변이 오가는 소형 커뮤니티 카페입니다.',
           url: 'https://cafe.naver.com/goldbigdragon'
         },
         {
@@ -148,7 +148,11 @@ export default Vue.extend({
         },
         {
           name: '마인크래프트 BE 모두의 커뮤니티',
-          description: '---'
+          description: '마모커에서는 마인크래프트 BE의 대표적인 창작 기능들, 애드온과 리소스팩을 연구해보고 모델링을 만들어 자신의 창작물에 놀라움을 넣어볼 수 있는 재능을 익혀갈 수 있는 커뮤니티입니다\n',
+          img: {
+            light: '/assets/sponsors/bemc/logo.svg'
+          },
+          url: 'https://band.us/@bemc'
         },
         {
           name: '마인이메이터 유저 센터 (마유센)',
