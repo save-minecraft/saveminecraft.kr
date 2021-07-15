@@ -17,16 +17,20 @@
     .bg-gray-100
       .p-4.max-w-6xl.m-auto
         p.lv1.text-center.text-xl
+          i.fas.fa-arrow-down.mr-2.cursor-pointer.animate-bounce(@click="toggleDevMode()")
           | 현재까지&nbsp;
           span.font-bold {{ totalPlayers.length }}
           | 명이 함께 해 주셨습니다.
+          i.fas.fa-arrow-down.ml-2.cursor-pointer.animate-bounce(@click="")
 
         ul.mt-6.grid.grid-cols-2.justify-between.gap-4(class='md:grid-cols-4 lg:grid-cols-5' v-if='totalPlayers.length > 0')
           li(v-for='player in totalPlayers')
-            .group.block.rounded-lg.h-8.p-1.px-2.transition(class="hover:scale-110 hover:bg-green-600")
-              .inline-flex.flex-row.h-full.content-center.place-items-center
+            .group.block.rounded-lg.transition(class="hover:scale-110 hover:bg-green-600")
+              .inline-flex.flex-row.h-10.p-1.px-2.content-center.place-items-center
                 img.rounded-sm.h-full.mr-4(:src='"https://crafatar.com/avatars/"+player.uuid+"?overlay"')
                 p.text-lg.lv1.max-w-full.truncate(class="group-hover:text-green-200") {{ player.name }}
+              template(v-if='devMode')
+                p.text-sm.text-gray-500 {{ player.uuid }}
 
         .mt-4(v-else)
           p.lv1.text-center.text-xl.mt-2
@@ -41,7 +45,8 @@ export default Vue.extend({
   layout: 'default',
   data () {
     return {
-      totalPlayers: []
+      totalPlayers: [],
+      devMode: false
     }
   },
   head () {
@@ -77,6 +82,9 @@ export default Vue.extend({
     async loadTotalPlayers () {
       const data = await this.$axios.get('/v1/exhibition/players/total')
       this.totalPlayers = data.data
+    },
+    toggleDevMode () {
+      this.devMode = !this.devMode
     }
   }
 })
