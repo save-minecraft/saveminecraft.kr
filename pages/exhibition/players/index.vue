@@ -17,11 +17,10 @@
     .bg-gray-100
       .p-4.max-w-6xl.m-auto
         p.lv1.text-center.text-xl
-          i.fas.fa-arrow-down.mr-2.cursor-pointer.animate-bounce(@click="toggleDevMode()")
           | 현재까지&nbsp;
           span.font-bold {{ totalPlayers.length }}
           | 명이 함께 해 주셨습니다.
-          i.fas.fa-arrow-down.ml-2.cursor-pointer.animate-bounce(@click="")
+          i.fas.fa-arrow-down.ml-2.cursor-pointer.animate-bounce(@click="toggleDevMode()")
 
         ul.mt-6.grid.grid-cols-2.justify-between.gap-4(class='sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5' v-if='totalPlayers.length > 0')
           li(v-for='player in totalPlayers')
