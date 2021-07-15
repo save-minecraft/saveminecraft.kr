@@ -20,8 +20,8 @@
 
     nuxt
 
-    footer.p-4.max-w-6xl.m-auto.mt-6
-      div.items-center(class="md:flex md:justify-between")
+    footer.p-4.max-w-6xl.m-auto.mt-6.mb-6
+      div.items-center(class="lg:flex lg:justify-between")
         div
           p.font-light &copy; saveminecraft.kr
           p.text-sm Minecraft는 Mojang AB의 상표이며, saveminecraft.kr 은 Mojang AB의 공식 사이트가 아닙니다.
