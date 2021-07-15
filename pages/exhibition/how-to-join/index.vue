@@ -75,7 +75,16 @@
       img.mt-2.max-w-56.m-auto(src="/assets/how-to-join/images/ingame_004.png")
 
       .mt-8
-      h2.lv1.text-2xl 7. 전시장을 즐깁니다.
+      h2.lv1.text-2xl 7. Optifine 및 Shader 설치 (선택)
+      p 더욱 최적의 경험을 위해 Shader를 설치하는 것을 권장합니다.
+      p.text-yellow-500
+        i.fas.fa-exclamation-triangle.mr-2
+        | 컴퓨터의 사양이 낮다면, 여기는 건너 뛰어주세요.
+
+      <iframe class="max-w-56 m-auto" src="https://www.youtube.com/embed/VKsQvcMCsWY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      .mt-8
+      h2.lv1.text-2xl 8. 전시장을 즐깁니다.
 
       //-
         TODO: 여기에 마인크래프트 버전 설정 방법과 인 게임에서 어떻게 해야 하는 지 상세하게 작성
