@@ -28,6 +28,7 @@
                 .inline-flex.flex-row.h-full.content-center.place-items-center
                   img.rounded-sm.h-full.mr-4(:src='"https://crafatar.com/avatars/"+player.uuid+"?overlay"')
                   p.text-lg.lv1.max-w-full.truncate(class="group-hover:text-green-200") {{ player.name }}
+
     .bg-gray-100.py-4(v-else)
       .text-center
         p.lv1.text-lg
@@ -94,7 +95,7 @@
                 template(v-if="developerMode")
                   p.text-xs.mt-1.text-gray-700 {{ guestbook.uuid }}
       template(v-else)
-        p.text-2xl.lv1 방명록이 비어있습니다
+        p.text-xl.lv1 방명록이 비어있습니다
         p.mt-2 서버에 접속해 방명록을 적어보세요.
 
 </template>
