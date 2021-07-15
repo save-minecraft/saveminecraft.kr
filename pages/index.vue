@@ -205,15 +205,6 @@ export default Vue.extend({
         },
         {
           img: {
-            light: '/assets/sponsors/packet.stream/logo-black.svg',
-            dark: '/assets/sponsors/packet.stream/logo-white.svg'
-          },
-          name: 'Packetstream',
-          description: '네트워크 가속 및 DDoS 보안 서비스를 제공하는 업체로, 이번 셧다운제 폐지 청원 전시회의 인프라를 담당합니다.',
-          url: 'https://packet.stream'
-        },
-        {
-          img: {
             light: '/assets/sponsors/stella-it/logo_light.svg',
             dark: '/assets/sponsors/stella-it/logo_dark.svg'
           },
