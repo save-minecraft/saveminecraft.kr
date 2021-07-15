@@ -31,7 +31,7 @@
     .bg-gray-100.py-4(v-else)
       .text-center
         p.lv1.text-lg
-          | 2021년 7월 16일, 전시회 개장 예정입니다.
+          | 2021년 7월 16일 오후 1시에 전시회 개장 예정입니다.
           i.fas.fa-arrow-down.ml-2.cursor-pointer.animate-bounce(@click="setItOpen()")
 
     .mt-4
@@ -113,7 +113,7 @@ export default Vue.extend({
       this.isOpen = true
     },
     checkHasOpened () {
-      this.isOpen = new Date().getTime() >= 1626393600000
+      this.isOpen = new Date().getTime() >= 1626408000000
     },
     async loadPlayerCount () {
       const data = await this.$axios.get('/v1/exhibition/players/totalCount')
