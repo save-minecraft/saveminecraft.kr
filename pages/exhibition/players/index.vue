@@ -23,7 +23,7 @@
           | 명이 함께 해 주셨습니다.
           i.fas.fa-arrow-down.ml-2.cursor-pointer.animate-bounce(@click="")
 
-        ul.mt-6.grid.grid-cols-2.justify-between.gap-4(class='md:grid-cols-4 lg:grid-cols-5' v-if='totalPlayers.length > 0')
+        ul.mt-6.grid.grid-cols-2.justify-between.gap-4(class='sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5' v-if='totalPlayers.length > 0')
           li(v-for='player in totalPlayers')
             .group.block.rounded-lg.transition(class="hover:scale-110 hover:bg-green-600")
               .inline-flex.flex-row.h-10.p-1.px-2.content-center.place-items-center
