@@ -81,17 +81,21 @@
       p 전시회장 내에서 작성한 방명록입니다.
 
       .mt-4
-      .grid.grid-cols-1.gap-4(class='md:grid-cols-2 lg:grid-cols-3')
-        .group.block.rounded-lg.p-4.bg-gray-200.transition.cursor-pointer(@click='goDevMode()' class='hover:bg-green-500 hover:border-transparent hover:shadow-lg' v-for='guestbook in guestbooks')
-          .flex.justify-between.flex-col.h-full
-            div
-              img.inline-block.h-6.rounded-sm.h-full.mr-4(:src='"https://crafatar.com/avatars/"+guestbook.player.uuid+"?overlay"')
-              span.lv1.text-xl {{ guestbook.player.name }}
-            div.mt-4
-              .font-medium.text-gray-500(class='group-hover:text-green-200' v-if="guestbook.content" v-for="line in splitLines(guestbook.content)")
-                p.text-sm {{ line ? line : "&nbsp;" }}
-              template(v-if="developerMode")
-                p.text-xs.mt-1.text-gray-700 {{ guestbook.uuid }}
+      template(v-if="guestbooks.length > 0")
+        .grid.grid-cols-1.gap-4(class='md:grid-cols-2 lg:grid-cols-3')
+          .group.block.rounded-lg.p-4.bg-gray-200.transition.cursor-pointer(@click='goDevMode()' class='hover:bg-green-500 hover:border-transparent hover:shadow-lg' v-for='guestbook in guestbooks')
+            .flex.justify-between.flex-col.h-full
+              div
+                img.inline-block.h-6.rounded-sm.h-full.mr-4(:src='"https://crafatar.com/avatars/"+guestbook.player.uuid+"?overlay"')
+                span.lv1.text-xl {{ guestbook.player.name }}
+              div.mt-4
+                .font-medium.text-gray-500(class='group-hover:text-green-200' v-if="guestbook.content" v-for="line in splitLines(guestbook.content)")
+                  p.text-sm {{ line ? line : "&nbsp;" }}
+                template(v-if="developerMode")
+                  p.text-xs.mt-1.text-gray-700 {{ guestbook.uuid }}
+      template(v-else)
+        p.text-2xl.lv1 방명록이 비어있습니다
+        p.mt-2 서버에 접속해 방명록을 적어보세요.
 
 </template>
 
