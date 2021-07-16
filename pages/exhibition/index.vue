@@ -56,6 +56,15 @@
           | 2021년 7월 16일 오후 3시에 전시회 개장 예정입니다.
           i.fas.fa-arrow-down.ml-2.cursor-pointer.animate-bounce(@click="setItOpen()")
 
+    .bg-yellow-500.text-black.mt-4.mb-4
+      .p-6.max-w-6xl.m-auto.text-center
+        p.text-2xl.mb-2
+          i.fas.fa-exclamation-triangle.mr-2
+          span.font-bold 공지
+        p 서버의 문제를 해결하기 위해 점검중에 있습니다.
+        p 점검완료는 7월 17일 15시 예정입니다. 찾아주셔서 감사드립니다.
+        p 쾌적한 전시회가 되도록 최선을 다하겠습니다.
+
     .mt-4
     div.p-4.max-w-6xl.m-auto.text-center
       p.lv1.text-lg 접속 주소
@@ -179,6 +188,7 @@ export default Vue.extend({
     setItOpen () {
       // 이거 개발용 function이예요....
       this.isOpen = false
+      this.isMaintenance = false
       this.developerMode = true
     },
     goDevMode () {
