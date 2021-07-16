@@ -164,7 +164,7 @@ export default Vue.extend({
       return `${num}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
     },
     setItOpen () {
-      this.isOpen = true
+      this.isOpen = false
       this.developerMode = true
     },
     goDevMode () {
