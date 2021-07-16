@@ -170,7 +170,7 @@ export default Vue.extend({
           description: `이 작품은 '메이플스토리'라는 게임의 '블랙헤븐'이라는 스토리를 건축으로 재현한 작품입니다.
 두 함대가 격렬히 전투하는 모습을 3차원 구조로 구현하여 보다 현장감을 느낄 수 있게 하였습니다.
 두 세력 간 색감이 대비되도록 제작하였으니 이를 중심으로 관람하시는 것을 추천드립니다.`,
-          url: 'https://cafe.naver.com/minecraftgame/1819159'
+          url: 'https://cafe.naver.com/minecraftgame/1819880'
         },
         {
           title: '무릉선향도',
