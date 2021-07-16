@@ -45,7 +45,7 @@
     .bg-gray-100.py-4(v-else)
       .text-center
         p.lv1.text-lg
-          | 2021년 7월 16일 오후 1시에 전시회 개장 예정입니다.
+          | 2021년 7월 16일 오후 3시에 전시회 개장 예정입니다.
           i.fas.fa-arrow-down.ml-2.cursor-pointer.animate-bounce(@click="setItOpen()")
 
     .mt-4
@@ -130,7 +130,7 @@ export default Vue.extend({
   },
   head () {
     const title = '셧다운제 폐지 청원 전시회'
-    const description = '셧다운제 폐지를 위한 전시회가 7월 16일 오후 1시부터 시작됩니다!'
+    const description = '셧다운제 폐지를 위한 전시회가 7월 16일 오후 3시부터 시작됩니다!'
 
     return {
       title,
@@ -174,7 +174,7 @@ export default Vue.extend({
       }
     },
     checkHasOpened () {
-      this.isOpen = new Date().getTime() >= 1626408000000
+      this.isOpen = new Date().getTime() >= 1626415200000
     },
     async loadPlayerCount () {
       const data = await this.$axios.get('/v1/exhibition/players/totalCount')
