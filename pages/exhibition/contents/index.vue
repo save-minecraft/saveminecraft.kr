@@ -23,7 +23,10 @@
     modal(v-show="openModal" @close="openModal = !openModal")
       template(#header)
         h1.text-lg.font-bold {{ modal.title }}
-        p.text-sm.mt-2
+        p.mt-2(v-if='modal.subtitle')
+          span.font-bold.mr-1 부제:
+          | {{ modal.subtitle }}
+        p.text-sm.mt-4
           span.font-bold.mr-1 제작자:
           | {{ modal.createdBy }}
       template(#body)
@@ -167,6 +170,15 @@ export default Vue.extend({
 제목에서도 알 수 있듯 여러 동양화들에서 모티프를 얻어 제작했으며 작품자체도 한 폭의 그림처럼 보여지게 의도하여 제작했습니다.
 팬데믹 상황으로 인해 활동이 제한된 시대에서 많은 분들이 메타버스에서 건축된 무릉도원으로 인해 답답한 일상에 조금이나마 환기를 하실 수 있으면 좋겠습니다.`,
           url: 'https://cafe.naver.com/minecraftgame/1820185'
+        },
+        {
+          title: 'The origin of creation: Dam coast',
+          createdBy: '김치 보이즈',
+          description: `"어느 바다의 한가운데, 바다를 가로막는 거대한 벽으로 둘러싸인 도시가 있다.  그리고 세상에 존재하는 대부분의 지식, 부, 사상, 아름다움, 꿈, 열정, 사랑은 그곳에 있다. "
+3명의 한국인 마인크래프트 건축가로 구성된 김치 보이즈가 1년 5개월 동안 영혼과 열정을 쏟은 최대의 프로젝트이자 3번째로 대중에게 공개한 작품입니다.
+제작 초기에 작품의 컨셉과 구성을 설정하고 시작하지 않았고, 제작 과정에서 3인이 즉흥적으로 떠올린 아이디어들을 있는 그대로 과감하게 표현하며 진행된 작품입니다.
+"창조의 기원 : 댐 코스트"는 1년 5개월간의 그들의 즉흥적인 발상들이 모여서 만들어진 하나의 거대한 작품이자 세계입니다.`,
+          url: 'https://cafe.naver.com/minecraftgame/1819755'
         }
       ],
       modal: {

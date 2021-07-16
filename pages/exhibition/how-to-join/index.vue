@@ -38,20 +38,53 @@
         a.text-blue-500(href="https://www.xbox.com/ko-KR/verifyage") Xbox Live 성인 인증 페이지
         | 에서 성인인증을 진행해 주세요.
 
-      .mt-8
-      h2.lv1.text-2xl 3. 마인크래프트 버전이 (대응 버전) 으로 설정되어있는지 확인하고, 플레이 버튼을 누릅니다.
+      img.mt-2.max-w-56.m-auto(src="/assets/how-to-join/images/install_001.png")
 
       .mt-8
-      h2.lv1.text-2xl 4. 마인크래프트가 실행 되면, 멀티플레이어 (Multiplayer) 버튼을 누릅니다.
+      h2.lv1.text-2xl 3. 마인크래프트 버전을 (1.16.5) 으로 설정합니다.
+
+      h3.text-xl.mt-4 1. 설치 설정을 클릭합니다.
+      img.mt-2.max-w-56.m-auto(src="/assets/how-to-join/images/install_003.png")
+
+      h3.text-xl.mt-4 2. New Installation을 클릭합니다.
+      img.mt-2.max-w-56.m-auto(src="/assets/how-to-join/images/install_004.png")
+
+      h3.text-xl.mt-4 3. 버전을 release 1.16.5 로 설정합니다.
+      img.mt-2.max-w-56.m-auto(src="/assets/how-to-join/images/install_005.png")
+
+      h3.text-xl.mt-4 4. 플레이를 클릭하여 런처 메인 화면으로 다시 돌아갑니다.
+      img.mt-2.max-w-56.m-auto(src="/assets/how-to-join/images/install_006.png")
+
+      h3.text-xl.mt-4 5. 좌측 하단의 버전 부분을 (대부분, 최신 릴리즈 라고 적혀있습니다.) 클릭합니다.
+      img.mt-2.max-w-56.m-auto(src="/assets/how-to-join/images/install_007.png")
+
+      h3.text-xl.mt-4 6. 새로 만든 설정을 클릭하고, 플레이를 누릅니다.
+      img.mt-2.max-w-56.m-auto(src="/assets/how-to-join/images/install_008.png")
+
+      .mt-8
+      h2.lv1.text-2xl 4. 마인크래프트가 실행 하고, 멀티플레이어 (Multiplayer) 버튼을 누릅니다.
+      img.mt-2.max-w-56.m-auto(src="/assets/how-to-join/images/ingame_001.png")
 
       .mt-8
       h2.lv1.text-2xl 5. 직접 접속을 누른 후, saveminecraft.kr 을 입력합니다.
+      img.mt-2.max-w-56.m-auto(src="/assets/how-to-join/images/ingame_002.png")
+      img.mt-2.max-w-56.m-auto(src="/assets/how-to-join/images/ingame_003.png")
 
       .mt-8
       h2.lv1.text-2xl 6. 서버 참여하기를 누릅니다.
+      img.mt-2.max-w-56.m-auto(src="/assets/how-to-join/images/ingame_004.png")
 
       .mt-8
-      h2.lv1.text-2xl 7. 전시장을 즐깁니다.
+      h2.lv1.text-2xl 7. Optifine 및 Shader 설치 (선택)
+      p 더욱 최적의 경험을 위해 Shader를 설치하는 것을 권장합니다.
+      p.text-yellow-500
+        i.fas.fa-exclamation-triangle.mr-2
+        | 컴퓨터의 사양이 낮다면, 여기는 건너 뛰어주세요.
+
+      <iframe class="max-w-56 m-auto" src="https://www.youtube.com/embed/VKsQvcMCsWY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      .mt-8
+      h2.lv1.text-2xl 8. 전시장을 즐깁니다.
 
       //-
         TODO: 여기에 마인크래프트 버전 설정 방법과 인 게임에서 어떻게 해야 하는 지 상세하게 작성
