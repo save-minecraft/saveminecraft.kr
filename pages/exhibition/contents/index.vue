@@ -54,6 +54,7 @@ export default Vue.extend({
   layout: 'default',
   data () {
     return {
+      notice: '',
       exhibits: [
         {
           title: '시즌레스 오브제 모빌',
@@ -100,7 +101,7 @@ export default Vue.extend({
           createdBy: '사비나루',
           description: ` 머스크사의 Triple E Class와 HMM의 알헤시라스를 모티브로 제작한 창작 컨테이너선입니다. 세계의 핏줄처럼 코로나 시대에도 끊임없이 화물을 나르는 화물선을 표현하였습니다. 드넓은 바다를 항해하는 초대형 컨테이너선의 이곳저곳을 감상해 보세요. 현대 물류의 정점을 찍은 컨테이너선, 이 컨테이너선을 감상하면서 자유로운 미래를 꿈꿀 수 있으시면 좋겠습니다. 
 원활한 감상을 위해서는 SEUS PTGI E12 셰이더와 16 이상의 렌더 거리를 설정하는것을 권장합니다. (저사양의 컴퓨터에서는 해당 셰이더의 작동이 어려울 수 있습니다.)`,
-          url: 'https://cafe.naver.com/minecraftgame/1819313'
+          url: 'https://cafe.naver.com/minecraftgame/1819978'
         },
         {
           title: '베르세르크',
@@ -108,7 +109,7 @@ export default Vue.extend({
           description: `만화 베르세르크에 등장하는 "가츠"라는 남자 주인공의 동상 건축입니다.
 얼마전 만화작가님의 서거를 추모하기 위해 만화의 일부분을 입체적으로 건축하여 작가님의 추모 기념비로 제작 해 보았습니다.
 명암과 마인크래프트 블럭들을 이용한 표현 방법이 이 동상건축의 관전포인트가 되겠습니다.`,
-          url: 'https://cafe.naver.com/minecraftgame/1819978'
+          url: 'https://cafe.naver.com/minecraftgame/1819693'
         },
         {
           title: '공주열차',

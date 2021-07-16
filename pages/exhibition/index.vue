@@ -48,6 +48,14 @@
           | 2021년 7월 16일 오후 3시에 전시회 개장 예정입니다.
           i.fas.fa-arrow-down.ml-2.cursor-pointer.animate-bounce(@click="setItOpen()")
 
+    .bg-yellow-500.text-black.mt-4.mb-4
+      .p-6.max-w-6xl.m-auto.text-center
+        p.text-2xl.mb-2
+          i.fas.fa-exclamation-triangle.mr-2
+          span.font-bold 공지
+        p 현재 일부 전시품이 정상적으로 로딩되지 않는 문제가 발견되어 현재 조치 중입니다.
+        p 빠르게 조치하겠습니다.
+
     .mt-4
     div.p-4.max-w-6xl.m-auto.text-center
       p.lv1.text-lg 접속 주소
