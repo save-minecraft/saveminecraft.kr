@@ -162,7 +162,15 @@ export default Vue.extend({
           createdBy: '심플',
           description: `요즈음 코로나19 팬데믹으로 인하여 국내여행조차 힘든 상황에도 송도 센트럴파크의 멋진 광경을 즐길 수 있도록 마인크래프트를 메타버스로 활용하여 인천 송도 센트럴파크를 마인크래프트 내에 구현하였습니다.
 센트럴파크의 산책로를 거닐며 자연과 주변 고층건물들의 조화를 중심으로 관람하시는 것을 추천드립니다.`,
-          url: 'https://cafe.naver.com/minecraftgame/1820432'
+          url: 'https://cafe.naver.com/minecraftgame/1819159'
+        },
+        {
+          title: '메이플스토리 블랙헤븐',
+          createdBy: '심플',
+          description: `이 작품은 '메이플스토리'라는 게임의 '블랙헤븐'이라는 스토리를 건축으로 재현한 작품입니다.
+두 함대가 격렬히 전투하는 모습을 3차원 구조로 구현하여 보다 현장감을 느낄 수 있게 하였습니다.
+두 세력 간 색감이 대비되도록 제작하였으니 이를 중심으로 관람하시는 것을 추천드립니다.`,
+          url: 'https://cafe.naver.com/minecraftgame/1819159'
         },
         {
           title: '무릉선향도',
