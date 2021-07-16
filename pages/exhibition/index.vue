@@ -12,7 +12,7 @@
           div.inline-block.text-right
             p.lv1.text-lg.no-kerning 2021.
             p.lv1.text-2xl.no-kerning 07.16
-            p.lv1.text-2xl.no-kerning ~07.18
+            p.lv1.text-2xl.no-kerning ~07.24
 
     .bg-gray-100(v-if="isOpen")
       .p-4.max-w-6xl.m-auto
@@ -45,7 +45,9 @@
     .bg-gray-100.py-4(v-else)
       .text-center
         p.lv1.text-lg
-          | 2021년 7월 16일 오후 3시에 전시회 개장 예정입니다.
+          //-
+            | 2021년 7월 16일 오후 3시에 전시회 개장 예정입니다.
+          | 발견된 서버 안정성 문제로 인해, 2021년 7월 17일 오후 3시에 전시회 재 개장 예정입니다.
           i.fas.fa-arrow-down.ml-2.cursor-pointer.animate-bounce(@click="setItOpen()")
 
     .bg-yellow-500.text-black.mt-4.mb-4
@@ -173,7 +175,7 @@ export default Vue.extend({
     },
     setItOpen () {
       // 이거 개발용 function이예요....
-      this.isOpen = true
+      this.isOpen = false
       this.developerMode = true
     },
     goDevMode () {
