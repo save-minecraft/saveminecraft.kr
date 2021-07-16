@@ -187,7 +187,7 @@ export default Vue.extend({
     },
     setItOpen () {
       // 이거 개발용 function이예요....
-      this.isOpen = false
+      this.isOpen = true
       this.isMaintenance = false
       this.developerMode = true
     },
