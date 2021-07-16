@@ -14,7 +14,7 @@
             p.lv1.text-2xl.no-kerning 07.16
             p.lv1.text-2xl.no-kerning ~07.18
 
-    .bg-gray-100(v-if="isOpen")
+    .bg-gray-100(v-if="isOpen && !isMaintenance")
       .p-4.max-w-6xl.m-auto
         p.lv1.text-center.text-xl
           | 현재까지&nbsp;
@@ -36,13 +36,13 @@
 
         .mt-4(v-else)
           p.lv1.text-center.text-xl.mt-2
-            | 아무도 접근하지 않았습니다.
+            | 온라인인 플레이어가 없습니다.
 
         .flex.justify-end.gap-4.mt-4
           nuxt-link.btn.bg-green-600.p-0.text-white(to="/exhibition/players" class="hover:bg-green-800 hover:translate-x-1") 모든 플레이어 보기
             i.fas.fa-arrow-right.ml-2
 
-    .bg-gray-100.py-4(v-else)
+    .bg-gray-100.py-4(v-else-if="isMaintenance")
       .text-center
         p.lv1.text-lg
           //-
@@ -50,13 +50,11 @@
           | 발견된 서버 안정성 문제로 인해, 2021년 7월 17일 오후 3시에 전시회 재 개장 예정입니다.
           i.fas.fa-arrow-down.ml-2.cursor-pointer.animate-bounce(@click="setItOpen()")
 
-    .bg-yellow-500.text-black.mt-4.mb-4
-      .p-6.max-w-6xl.m-auto.text-center
-        p.text-2xl.mb-2
-          i.fas.fa-exclamation-triangle.mr-2
-          span.font-bold 공지
-        p 현재 일부 전시품이 정상적으로 로딩되지 않는 문제가 발견되어 현재 조치 중입니다.
-        p 빠르게 조치하겠습니다.
+    .bg-gray-100.py-4(v-else)
+      .text-center
+        p.lv1.text-lg
+          | 2021년 7월 16일 오후 3시에 전시회 개장 예정입니다.
+          i.fas.fa-arrow-down.ml-2.cursor-pointer.animate-bounce(@click="setItOpen()")
 
     .mt-4
     div.p-4.max-w-6xl.m-auto.text-center
@@ -117,6 +115,10 @@
                   p.text-sm {{ line ? line : "&nbsp;" }}
                 template(v-if="developerMode")
                   p.text-xs.mt-1.text-gray-700 {{ guestbook.uuid }}
+
+        .flex.justify-end.gap-4.mt-4
+          nuxt-link.btn.bg-green-600.p-0.text-white(to="/exhibition/guestbooks" class="hover:bg-green-800 hover:translate-x-1") 모든 방명록 보기
+            i.fas.fa-arrow-right.ml-2
       template(v-else)
         p.text-xl.lv1 방명록이 비어있습니다
         p 서버에 접속해 방명록을 적어보세요.
@@ -134,6 +136,7 @@ export default Vue.extend({
       currentlyPlaying: [],
       guestbooks: [],
       isOpen: false,
+      isMaintenance: false,
       developerMode: false,
       devModeCount: 0
     }
@@ -186,6 +189,7 @@ export default Vue.extend({
     },
     checkHasOpened () {
       this.isOpen = new Date().getTime() >= 1626415200000
+      this.isMaintenance = new Date().getTime() < 1626501600000
     },
     async loadPlayerCount () {
       const data = await this.$axios.get('/v1/exhibition/players/totalCount')
@@ -196,7 +200,7 @@ export default Vue.extend({
       this.currentlyPlaying = data.data
     },
     async loadGuestbooks () {
-      const data = await this.$axios.get('/v1/exhibition/guestbooks')
+      const data = await this.$axios.get('/v1/exhibition/guestbooks?limit=12')
       this.guestbooks = data.data
     },
     async copyString (string: string, destination?: string) {
