@@ -55,6 +55,12 @@ export default Vue.extend({
       ],
       newses: [
         {
+          title: "'마인크래프트'로 열린 셧다운제 폐지 전시회",
+          publisher: '인벤',
+          releasedAt: '2021-07-16',
+          url: 'https://www.inven.co.kr/webzine/news/?news=259281'
+        },
+        {
           title: '마인크래프트 속 셧다운 폐지 청원 전시회 열린다',
           publisher: '전자신문',
           releasedAt: '2021-07-12',
