@@ -62,16 +62,16 @@
       img.mt-2.max-w-56.m-auto(src="/assets/how-to-join/images/install_008.png")
 
       .mt-8
-      h2.lv1.text-2xl 4. 마인크래프트가 실행 하고, 멀티플레이어 (Multiplayer) 버튼을 누릅니다.
+      h2.lv1.text-2xl 7. 마인크래프트가 실행 하고, 멀티플레이어 (Multiplayer) 버튼을 누릅니다.
       img.mt-2.max-w-56.m-auto(src="/assets/how-to-join/images/ingame_001.png")
 
       .mt-8
-      h2.lv1.text-2xl 5. 직접 접속을 누른 후, saveminecraft.kr 을 입력합니다.
+      h2.lv1.text-2xl 8. 직접 접속을 누른 후, saveminecraft.kr 을 입력합니다.
       img.mt-2.max-w-56.m-auto(src="/assets/how-to-join/images/ingame_002.png")
       img.mt-2.max-w-56.m-auto(src="/assets/how-to-join/images/ingame_003.png")
 
       .mt-8
-      h2.lv1.text-2xl 6. 서버 참여하기를 누릅니다.
+      h2.lv1.text-2xl 9. 서버 참여하기를 누릅니다.
       img.mt-2.max-w-56.m-auto(src="/assets/how-to-join/images/ingame_004.png")
 
       .mt-8
