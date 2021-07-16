@@ -12,7 +12,7 @@
           div.inline-block.text-right
             p.lv1.text-lg.no-kerning 2021.
             p.lv1.text-2xl.no-kerning 07.16
-            p.lv1.text-2xl.no-kerning ~07.24
+            p.lv1.text-2xl.no-kerning ~07.18
 
     .bg-gray-100(v-if="isOpen")
       .p-4.max-w-6xl.m-auto
