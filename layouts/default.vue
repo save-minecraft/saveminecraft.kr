@@ -41,7 +41,7 @@ export default Vue.extend({
   data () {
     return {
       isIE: false,
-      commit: process.env.NUXT_ENV_CURRENT_GIT_HASH
+      commit: process.env.NUXT_ENV_CURRENT_GIT_HASH || 'dev'
     }
   },
   mounted () {
