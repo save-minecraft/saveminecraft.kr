@@ -43,13 +43,13 @@ export default Vue.extend({
         {
           title: '[보도자료] 미성년자 이용 불가 사태, <마인크래프트>로 온라인 작품 전시회 개최한다',
           releasedAt: '2021-07-12',
-          publisher: '우리 마인크래프트 공간',
+          publisher: '우리들의 마인크래프트 공간',
           url: 'https://cafe.naver.com/minecraftgame/1819898'
         },
         {
           title: '[보도자료] 대표적 교육용 게임 <마인크래프트>, 올해부턴 성인용… ‘만 18세 미만’ 이용 제한에 발목',
           releasedAt: '2021-07-02',
-          publisher: '우리 마인크래프트 공간',
+          publisher: '우리들의 마인크래프트 공간',
           url: 'https://cafe.naver.com/minecraftgame/1818027'
         }
       ],
