@@ -168,6 +168,7 @@ export default Vue.extend({
     this.loadGuestbooks()
 
     setInterval(() => {
+      this.loadPlayerCount()
       this.loadCurrentlyPlaying()
       this.loadGuestbooks()
     }, 10000)
