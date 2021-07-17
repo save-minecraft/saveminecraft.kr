@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
+    "current-git-sha": "NUXT_ENV_CURRENT_GIT_SHA=`git rev-parse --short HEAD`",
+    "dev": "yarn run current-git-sha nuxt",
+    "build": "yarn run current-git-sha nuxt build",
+    "generate": "yarn run git-env-sha nuxt generate",
     "start": "nuxt start",
-    "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "yarn lint:js"
   },

@@ -25,6 +25,9 @@
         div
           p.font-light &copy; saveminecraft.kr
           p.text-sm Minecraft는 Mojang AB의 상표이며, saveminecraft.kr 은 Mojang AB의 공식 사이트가 아닙니다.
+          p.text-xs.mt-1.text-gray-500
+            span.font-bold Commit:
+            | {{ commit }}
         div.text-sm.mt-2(class="md:mt-0")
             nuxt-link.text-blue-500.mr-2(to="/privacy") 개인정보 처리방침
             nuxt-link.text-blue-500.mr-2(to="/acknowledgements") 오픈소스
@@ -37,7 +40,8 @@ import Vue from 'vue'
 export default Vue.extend({
   data () {
     return {
-      isIE: false
+      isIE: false,
+      commit: process.env.NUXT_ENV_CURRENT_GIT_HASH
     }
   },
   mounted () {
