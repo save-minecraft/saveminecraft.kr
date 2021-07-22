@@ -47,7 +47,9 @@
         p.lv1.text-lg
           //-
             | 2021년 7월 16일 오후 3시에 전시회 개장 예정입니다.
-          | 따듯한 관심 감사드립니다! 7월 22일부터 시작되는 2부에서 찾아뵙겠습니다!
+          // -
+            | 따듯한 관심 감사드립니다! 7월 22일부터 시작되는 2부에서 찾아뵙겠습니다!
+          | 2021년 7월 22일 오후 5시에 전시회 개장 예정입니다.
           i.fas.fa-arrow-down.ml-2.cursor-pointer.animate-bounce(@click="setItOpen()")
     .bg-gray-100.py-4(v-else)
       .text-center
@@ -190,7 +192,7 @@ export default Vue.extend({
     },
     checkHasOpened () {
       this.isOpen = new Date().getTime() >= 1626415200000
-      this.isMaintenance = new Date().getTime() < 1626933600000
+      this.isMaintenance = new Date().getTime() < 1626940800000
     },
     async loadPlayerCount () {
       const data = await this.$axios.get('/v1/exhibition/players/totalCount')
